@@ -163,15 +163,11 @@
     </div>
   </div>
 <script>
-  const hashedPassword = "2c6ee24b09816a6f14f95d1698b24ead"; // MD5("shoppro")
-
-  function md5(str) {
-    return CryptoJS.MD5(str).toString();
-  }
+  const haslo = "shoppro"; // ← Zmień na swoje własne w razie potrzeby
 
   function checkPassword() {
-    const pass = document.getElementById("pass").value;
-    if (md5(pass) === hashedPassword) {
+    const wpisane = document.getElementById("pass").value;
+    if (wpisane === haslo) {
       document.getElementById("login").style.display = "none";
       document.getElementById("panel").style.display = "block";
       pokazInfo();
