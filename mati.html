@@ -84,6 +84,30 @@
       font-size: 0.9rem;
       text-align: center;
     }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      margin: 2rem 0;
+      gap: 1rem;
+    }
+
+    nav button {
+      background: #1a1a1a;
+      color: #ccc;
+      border: 2px solid #38bdf8;
+      border-radius: 5px;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+    }
+
+    nav button.active {
+      background: #38bdf8;
+      color: #000;
+    }
+
+    section { display: none; }
+    section.active { display: block; }
   </style>
 </head>
 <body>
@@ -100,113 +124,8 @@
 
     <h1>🛡️ Panel Admina – Praktyki</h1>
 
-    <h2>📰 Edytuj Newsy</h2>
-    <div id="news-editor">
-      <label>Tytuł</label>
-      <input type="text" id="title">
-      <label>Link</label>
-      <input type="url" id="url">
-      <label>Źródło</label>
-      <input type="text" id="source">
-      <label>Opis</label>
-      <textarea id="description"></textarea>
-      <label>Data</label>
-      <input type="date" id="date">
-      <button onclick="dodajNewsa()">Dodaj</button>
-      <button onclick="pobierzJSON()">📥 Pobierz newsy.json</button>
-      <div id="news-list"></div>
-    </div>
-
-    <div style="text-align:center; margin-top: 2rem;">
-      <button onclick="wymusAktualizacje()">🔄 Wymuś aktualizację teraz</button>
-      <div id="update-info"></div>
-    </div>
-  </div>
-
-  <script>
-    const hashedPassword = "2c6ee24b09816a6f14f95d1698b24ead"; 
-
-    function md5(string) {
-      return CryptoJS.MD5(string).toString();
-    }
-
-    function checkPassword() {
-      const pass = document.getElementById("pass").value;
-      if (md5(pass) === hashedPassword) {
-        document.getElementById("login").style.display = "none";
-        document.getElementById("panel").style.display = "block";
-        pokazInfo();
-      } else {
-        alert("❌ Błędne hasło");
-      }
-    }
-
-    function pokazInfo() {
-      const zapis = localStorage.getItem("lastUpdate");
-      const info = document.getElementById("update-info");
-      if (info && zapis) {
-        const data = new Date(zapis);
-        info.textContent = `🕒 Ostatnia aktualizacja: ${data.toLocaleString("pl-PL")}`;
-      }
-    }
-
-    let newsy = [];
-
-    function dodajNewsa() {
-      const entry = {
-        title: document.getElementById("title").value,
-        link: document.getElementById("url").value,
-        source: document.getElementById("source").value,
-        description: document.getElementById("description").value,
-        date: document.getElementById("date").value
-      };
-      newsy.push(entry);
-      aktualizujListe();
-    }
-
-    function aktualizujListe() {
-      const container = document.getElementById("news-list");
-      container.innerHTML = "";
-      newsy.forEach((item, i) => {
-        const div = document.createElement("div");
-        div.className = "entry";
-        div.innerHTML = `
-          <strong>${item.title}</strong><br />
-          <em>${item.source} | ${item.date}</em><br />
-          <p>${item.description}</p>
-          <button onclick="usunNewsa(${i})">Usuń</button>
-        `;
-        container.appendChild(div);
-      });
-    }
-
-    function usunNewsa(i) {
-      newsy.splice(i, 1);
-      aktualizujListe();
-    }
-
-    function pobierzJSON() {
-      const blob = new Blob([JSON.stringify(newsy, null, 2)], { type: "application/json" });
-      const link = document.createElement("a");
-      link.href = URL.createObjectURL(blob);
-      link.download = "newsy.json";
-      link.click();
-    }
-
-    function wymusAktualizacje() {
-      const teraz = new Date();
-      localStorage.setItem("lastUpdate", teraz.toISOString());
-      pokazInfo();
-      alert("✅ Aktualizacja oznaczona. Odśwież stronę, aby zobaczyć zmiany.");
-    }
-
-    // Automatycznie pobierz istniejące dane
-    fetch("data/newsy.json")
-      .then(res => res.json())
-      .then(data => {
-        newsy = data;
-        aktualizujListe();
-      });
-  </script>
-</body>
-</html>
+    <nav>
+      <button onclick="switchTab('newsy')" class="active">Newsy</button>
+      <button onclick="switchTab('wydarzenia')">Wydarzenia</button>
+      <button onclick="switchTab('raporty')">Raporty</button>
+    </nav>
