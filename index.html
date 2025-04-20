@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Praktyki – Newsy</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
     <div class="container">
       <h1>Praktyki</h1>
-      <p>Strona przygotowana w celach edukacyjnych</p>
+      <p>Strona przygotowana w celach edukacyjnch</p>
     </div>
   </header>
 
@@ -31,6 +31,43 @@
     </div>
   </footer>
 
-  <script src="main.js"></script>
+  <script>
+    function fetchNewsyOncePerDay() {
+      const lastLoad = localStorage.getItem("lastNewsLoad");
+      const now = new Date();
+      const todayAtFour = new Date();
+      todayAtFour.setHours(4, 0, 0, 0);
+
+      if (!lastLoad || new Date(lastLoad).toDateString() !== now.toDateString() || (now > todayAtFour && new Date(lastLoad) < todayAtFour)) {
+        fetchNewsy();
+        localStorage.setItem("lastNewsLoad", now.toISOString());
+      } else {
+        console.log("Newsy już załadowane dziś.");
+      }
+    }
+
+    function fetchNewsy() {
+      fetch("data/newsy.json")
+        .then(res => res.json())
+        .then(news => {
+          const container = document.getElementById("news-container");
+          container.innerHTML = "";
+          news.forEach(item => {
+            const card = document.createElement("div");
+            card.className = "news-card";
+            card.innerHTML = `
+              <h2>${item.title}</h2>
+              <p><strong>Źródło:</strong> ${item.source} | <strong>Data:</strong> ${item.date}</p>
+              ${item.description ? `<p>${item.description}</p>` : ""}
+              <a href="${item.link}" target="_blank">Czytaj więcej</a>
+            `;
+            container.appendChild(card);
+          });
+        })
+        .catch(error => console.error("Błąd podczas ładowania newsów:", error));
+    }
+
+    fetchNewsyOncePerDay();
+  </script>
 </body>
 </html>
