@@ -58,7 +58,26 @@
   <div id="panel" style="display:none;">
     <p style="text-align:center; margin-bottom: 1rem;"><a href="index.html" style="color:#38bdf8; text-decoration:underline;">← Powrót do strony głównej</a></p>
     <h1>🛡️ Panel Admina – Praktyki</h1>
-    <!-- zawartość panelu zostaje bez zmian -->
+    <!-- zawartość panelu -->
+    <h2>📰 Edytuj Newsy</h2>
+    <div id="news-editor">
+      <label>Tytuł</label>
+      <input type="text" id="title">
+      <label>Link</label>
+      <input type="url" id="url">
+      <label>Źródło</label>
+      <input type="text" id="source">
+      <label>Opis</label>
+      <textarea id="description"></textarea>
+      <label>Data</label>
+      <input type="date" id="date">
+      <button onclick="dodajNewsa()">Dodaj</button>
+      <button onclick="pobierzJSON()">📥 Pobierz newsy.json</button>
+      <div id="news-list"></div>
+    </div>
+    <div style="text-align:center; margin-top: 2rem;">
+      <button onclick="wymusAktualizacje()">🔄 Wymuś aktualizację teraz</button>
+    </div>
   </div>
 
   <script>
@@ -91,5 +110,64 @@
       }
     }
   </script>
+<script>
+    let newsy = [];
+
+    function dodajNewsa() {
+      const entry = {
+        title: document.getElementById("title").value,
+        link: document.getElementById("url").value,
+        source: document.getElementById("source").value,
+        description: document.getElementById("description").value,
+        date: document.getElementById("date").value
+      };
+      newsy.push(entry);
+      aktualizujListe();
+    }
+
+    function aktualizujListe() {
+      const container = document.getElementById("news-list");
+      container.innerHTML = "";
+      newsy.forEach((item, i) => {
+        const div = document.createElement("div");
+        div.className = "entry";
+        div.innerHTML = `
+          <strong>${item.title}</strong><br />
+          <em>${item.source} | ${item.date}</em><br />
+          <p>${item.description}</p>
+          <button onclick="usunNewsa(${i})">Usuń</button>
+        `;
+        container.appendChild(div);
+      });
+    }
+
+    function usunNewsa(i) {
+      newsy.splice(i, 1);
+      aktualizujListe();
+    }
+
+    function pobierzJSON() {
+      const blob = new Blob([JSON.stringify(newsy, null, 2)], { type: "application/json" });
+      const link = document.createElement("a");
+      link.href = URL.createObjectURL(blob);
+      link.download = "newsy.json";
+      link.click();
+    }
+
+    function wymusAktualizacje() {
+      const teraz = new Date();
+      localStorage.setItem("lastUpdate", teraz.toISOString());
+      pokazInfo();
+      alert("✅ Aktualizacja oznaczona. Odśwież stronę, aby zobaczyć zmiany.");
+    }
+
+    // Automatycznie pobierz istniejące dane
+    fetch("data/newsy.json")
+      .then(res => res.json())
+      .then(data => {
+        newsy = data;
+        aktualizujListe();
+      });
+</script>
 </body>
 </html>
