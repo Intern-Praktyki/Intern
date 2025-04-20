@@ -108,13 +108,6 @@ nav a:hover {
   color: #fff;
 }
 
-#lista-wydarzen {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  margin-top: 1rem;
-}
-
 footer {
   background-color: #1a1a1a;
   text-align: center;
