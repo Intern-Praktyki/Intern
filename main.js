@@ -4,7 +4,7 @@ function fetchNewsy() {
     .then((res) => res.json())
     .then((news) => {
       const container = document.getElementById("news-container");
-      if (!container) return; // nie ładuj, jeśli jesteśmy na innej zakładce
+      if (!container) return;
       container.innerHTML = "";
       news.forEach((item) => {
         const card = document.createElement("div");
@@ -83,8 +83,26 @@ function fetchReports() {
     .catch(err => console.error("Błąd ładowania raportów:", err));
 }
 
-// === Automatyczne uruchamianie odpowiednich funkcji ===
+// === WYMUSZENIE AKTUALIZACJI Z LOCALSTORAGE ===
+function checkUpdateTime() {
+  const zapis = localStorage.getItem("lastUpdate");
+  if (!zapis) return;
+  const lastUpdate = new Date(zapis);
+  const todayAtFour = new Date();
+  todayAtFour.setHours(4, 0, 0, 0);
+  const now = new Date();
+
+  if (now > todayAtFour && lastUpdate > todayAtFour) {
+    console.log("🔄 Aktualizacja newsów/wydarzeń/raportów wymuszona przez panel admina");
+    fetchNewsy();
+    fetchEvents();
+    fetchReports();
+  }
+}
+
+// === START ===
 document.addEventListener("DOMContentLoaded", () => {
+  checkUpdateTime();
   fetchNewsy();
   fetchEvents();
   fetchReports();
