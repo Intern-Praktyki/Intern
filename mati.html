@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel Admina – Praktyki</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; background: #0f0f0f; color: #eee; padding: 2rem; }
+    h1, h2 { text-align: center; }
+    label { display: block; margin: 1rem 0 0.2rem; }
+    input, textarea, button, select {
+      width: 100%; max-width: 600px;
+      padding: 0.6rem;
+      margin-bottom: 1rem;
+      border: none;
+      border-radius: 4px;
+    }
+    input, textarea, select { background: #222; color: #eee; }
+    button {
+      background: #3fa34d;
+      color: #fff;
+      cursor: pointer;
+    }
+    button:hover { background: #2d863a; }
+    .entry { border: 1px solid #3fa34d; border-radius: 4px; padding: 1rem; margin: 1rem 0; background: #1a1a1a; }
+    .entry button { background: #8b0000; margin-top: 0.5rem; }
+    #update-info { margin-top: 2rem; color: #aaa; font-size: 0.9rem; text-align: center; }
+    nav {
+      display: flex;
+      justify-content: center;
+      margin: 2rem 0;
+      gap: 1rem;
+    }
+    nav button {
+      background: #1a1a1a;
+      color: #ccc;
+      border: 2px solid #38bdf8;
+      border-radius: 5px;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+    }
+    nav button.active {
+      background: #38bdf8;
+      color: #000;
+    }
+    section { display: none; }
+    section.active { display: block; }
+  </style>
+</head>
+<body>
+  <div id="login">
+    <h2>🔐 Wpisz hasło, aby uzyskać dostęp</h2>
+    <input type="password" id="pass" placeholder="Hasło..." />
+    <button onclick="checkPassword()">Zaloguj</button>
+  </div>
+
+  <div id="panel" style="display:none;">
+    <h1>🛡️ Panel Admina – Praktyki</h1>
+
+    <nav>
+      <button onclick="switchTab('newsy')" class="active">Newsy</button>
+      <button onclick="switchTab('events')">Wydarzenia</button>
+      <button onclick="switchTab('reports')">Raporty</button>
+    </nav>
+
+    <section id="newsy" class="active">
+      <label>Tytuł</label>
+      <input type="text" id="title">
+      <label>Link</label>
+      <input type="url" id="url">
+      <label>Źródło</label>
+      <input type="text" id="source">
+      <label>Opis</label>
+      <textarea id="description"></textarea>
+      <label>Data</label>
+      <input type="date" id="date">
+      <button onclick="dodaj('news')">Dodaj</button>
+      <button onclick="pobierz('news')">📥 Pobierz newsy.json</button>
+      <div id="news-list"></div>
+    </section>
+
+    <section id="events">
+      <label>Tytuł</label>
+      <input type="text" id="etitle">
+      <label>Data</label>
+      <input type="date" id="edate">
+      <label>Miejsce</label>
+      <input type="text" id="elocation">
+      <label>Opis</label>
+      <textarea id="edescription"></textarea>
+      <label>Link</label>
+      <input type="url" id="elink">
+      <button onclick="dodaj('event')">Dodaj</button>
+      <button onclick="pobierz('event')">📥 Pobierz events.json</button>
+      <div id="event-list"></div>
+    </section>
+
+    <section id="reports">
+      <label>Tytuł</label>
+      <input type="text" id="rtitle">
+      <label>Data</label>
+      <input type="date" id="rdate">
+      <label>Źródło</label>
+      <input type="text" id="rsource">
+      <label>Opis</label>
+      <textarea id="rdescription"></textarea>
+      <label>Link</label>
+      <input type="url" id="rlink">
+      <button onclick="dodaj('report')">Dodaj</button>
+      <button onclick="pobierz('report')">📥 Pobierz reports.json</button>
+      <div id="report-list"></div>
+    </section>
+
+    <div id="update-info"></div>
+    <div style="text-align:center; margin-top: 1rem;">
+      <button onclick="wymusAktualizacje()">🔄 Wymuś aktualizację teraz</button>
+    </div>
+  </div>
+
+  <script>
+    const haslo = "shoppro";
+    const dane = { news: [], event: [], report: [] };
+
+    function checkPassword() {
+      const pass = document.getElementById("pass").value;
+      if (pass === haslo) {
+        document.getElementById("login").style.display = "none";
+        document.getElementById("panel").style.display = "block";
+        pokazInfo();
+      } else {
+        alert("Błędne hasło");
+      }
+    }
+
+    function switchTab(tabId) {
+      document.querySelectorAll("nav button").forEach(b => b.classList.remove("active"));
+      document.querySelectorAll("section").forEach(s => s.classList.remove("active"));
+      document.querySelector(`nav button[onclick*='${tabId}']`).classList.add("active");
+      document.getElementById(tabId).classList.add("active");
+    }
+
+    function dodaj(type) {
+      let entry = {};
+      if (type === 'news') {
+        entry = {
+          title: document.getElementById("title").value,
+          link: document.getElementById("url").value,
+          source: document.getElementById("source").value,
+          description: document.getElementById("description").value,
+          date: document.getElementById("date").value
+        };
+      } else if (type === 'event') {
+        entry = {
+          title: document.getElementById("etitle").value,
+          date: document.getElementById("edate").value,
+          location: document.getElementById("elocation").value,
+          description: document.getElementById("edescription").value,
+          link: document.getElementById("elink").value
+        };
+      } else if (type === 'report') {
+        entry = {
+          title: document.getElementById("rtitle").value,
+          date: document.getElementById("rdate").value,
+          source: document.getElementById("rsource").value,
+          description: document.getElementById("rdescription").value,
+          link: document.getElementById("rlink").value
+        };
+      }
+      dane[type].push(entry);
+      aktualizujListe(type);
+    }
+
+    function aktualizujListe(type) {
+      const container = document.getElementById(`${type}-list`);
+      container.innerHTML = "";
+      dane[type].forEach((e, i) => {
+        const div = document.createElement("div");
+        div.className = "entry";
+        div.innerHTML = `<strong>${e.title}</strong><br><em>${e.date}</em><br><p>${e.description || ''}</p><button onclick="usun('${type}', ${i})">Usuń</button>`;
+        container.appendChild(div);
+      });
+    }
+
+    function usun(type, i) {
+      dane[type].splice(i, 1);
+      aktualizujListe(type);
+    }
+
+    function pobierz(type) {
+      const blob = new Blob([JSON.stringify(dane[type], null, 2)], { type: "application/json" });
+      const link = document.createElement("a");
+      link.href = URL.createObjectURL(blob);
+      link.download = `${type}s.json`;
+      link.click();
+    }
+
+    function pokazInfo() {
+      const zapis = localStorage.getItem("lastUpdate");
+      const info = document.getElementById("update-info");
+      if (zapis) {
+        const data = new Date(zapis);
+        info.textContent = `🕒 Ostatnia aktualizacja: ${data.toLocaleString("pl-PL")}`;
+      } else {
+        info.textContent = "🕒 Brak danych o aktualizacji.";
+      }
+    }
+
+    function wymusAktualizacje() {
+      const teraz = new Date();
+      localStorage.setItem("lastUpdate", teraz.toISOString());
+      pokazInfo();
+      alert("✅ Aktualizacja oznaczona. Przejdź na stronę publiczną i odśwież ją.");
+    }
+  </script>
+</body>
+</html>
