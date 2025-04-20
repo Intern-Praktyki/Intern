@@ -88,6 +88,12 @@
     }
 
     fetchEventsOncePerDay();
+  // Pokaż aktualny miesiąc i wydarzenia od razu po załadowaniu strony
+  document.addEventListener("DOMContentLoaded", () => {
+    zaladujWydarzenia();
+  });
+
+
   </script>
 </body>
 </html>
