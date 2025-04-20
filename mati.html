@@ -62,7 +62,7 @@
   </div>
 
   <script>
-    const hashedPassword = "2c6ee24b09816a6f14f95d1698b24ead"; 
+    const hashedPassword = "2c6ee24b09816a6f14f95d1698b24ead"; // ← Podmień na nowy hash (np. z zewnętrznego źródła)
 
     function md5(string) {
       return CryptoJS.MD5(string).toString();
@@ -80,5 +80,16 @@
     }
   </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+
+  <script>
+    function pokazInfo() {
+      const zapis = localStorage.getItem("lastUpdate");
+      const info = document.getElementById("update-info");
+      if (info && zapis) {
+        const data = new Date(zapis);
+        info.textContent = `🕒 Ostatnia aktualizacja: ${data.toLocaleString("pl-PL")}`;
+      }
+    }
+  </script>
 </body>
 </html>
