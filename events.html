@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Praktyki – Wydarzenia</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Praktyki</h1>
+      <p>Twoje źródło wiedzy o cyberbezpieczeństwie i edukacji</p>
+    </div>
+  </header>
+
+  <nav>
+    <a href="index.html">Start</a>
+    <a href="newsy.html">Newsy</a>
+    <a href="events.html" class="active">Wydarzenia</a>
+    <a href="reports.html">Raporty</a>
+  </nav>
+
+  <main class="container">
+    <div class="calendar-controls">
+      <button onclick="zmienMiesiac(-1)">⬅️ Poprzedni</button>
+      <span id="miesiac-nazwa" class="calendar-month"></span>
+      <button onclick="zmienMiesiac(1)">Następny ➡️</button>
+    </div>
+    <div id="lista-wydarzen"></div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Praktyki. Projekt edukacyjny o cyberbezpieczeństwie.</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
