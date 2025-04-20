@@ -1,0 +1,16 @@
+[
+  {
+    "title": "CyberSec Day 2025",
+    "date": "2025-05-15",
+    "location": "Warszawa, Polska",
+    "description": "Ogólnopolskie wydarzenie poświęcone bezpieczeństwu cyfrowemu w sektorze edukacyjnym i publicznym.",
+    "link": "https://example.com/cybersec-day"
+  },
+  {
+    "title": "Konferencja InfoSec Summit",
+    "date": "2025-06-08",
+    "location": "Kraków, Polska",
+    "description": "Spotkanie specjalistów ds. bezpieczeństwa IT oraz przedstawicieli małych i średnich firm.",
+    "link": "https://example.com/infosec-summit"
+  }
+]
