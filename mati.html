@@ -1,51 +1,89 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Panel Admina – Praktyki</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
   <style>
-    body { font-family: 'Inter', sans-serif; background: #0f0f0f; color: #eee; padding: 2rem; }
-    h1, h2 { text-align: center; }
-    label { display: block; margin: 1rem 0 0.2rem; }
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at center, rgba(56,189,248,0.1), transparent 70%), repeating-radial-gradient(circle at center, #0f0f0f 1px, transparent 3px);
+      background-size: 300% 300%;
+      animation: drift 60s linear infinite;
+      z-index: -1;
+    }
+
+    @keyframes drift {
+      0% { background-position: 0% 0%; }
+      100% { background-position: 100% 100%; }
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #0f0f0f;
+      color: #eee;
+      padding: 2rem;
+    }
+
+    h1, h2 {
+      text-align: center;
+    }
+
+    label {
+      display: block;
+      margin: 1rem 0 0.2rem;
+    }
+
     input, textarea, button, select {
-      width: 100%; max-width: 600px;
+      width: 100%;
+      max-width: 600px;
       padding: 0.6rem;
       margin-bottom: 1rem;
       border: none;
       border-radius: 4px;
     }
-    input, textarea, select { background: #222; color: #eee; }
+
+    input, textarea, select {
+      background: #222;
+      color: #eee;
+    }
+
     button {
       background: #3fa34d;
       color: #fff;
       cursor: pointer;
     }
-    button:hover { background: #2d863a; }
-    .entry { border: 1px solid #3fa34d; border-radius: 4px; padding: 1rem; margin: 1rem 0; background: #1a1a1a; }
-    .entry button { background: #8b0000; margin-top: 0.5rem; }
-    #update-info { margin-top: 2rem; color: #aaa; font-size: 0.9rem; text-align: center; }
-    nav {
-      display: flex;
-      justify-content: center;
-      margin: 2rem 0;
-      gap: 1rem;
+
+    button:hover {
+      background: #2d863a;
     }
-    nav button {
+
+    .entry {
+      border: 1px solid #3fa34d;
+      border-radius: 4px;
+      padding: 1rem;
+      margin: 1rem 0;
       background: #1a1a1a;
-      color: #ccc;
-      border: 2px solid #38bdf8;
-      border-radius: 5px;
-      padding: 0.5rem 1rem;
-      cursor: pointer;
     }
-    nav button.active {
-      background: #38bdf8;
-      color: #000;
+
+    .entry button {
+      background: #8b0000;
+      margin-top: 0.5rem;
     }
-    section { display: none; }
-    section.active { display: block; }
+
+    #update-info {
+      margin-top: 2rem;
+      color: #aaa;
+      font-size: 0.9rem;
+      text-align: center;
+    }
   </style>
 </head>
 <body>
@@ -56,9 +94,12 @@
   </div>
 
   <div id="panel" style="display:none;">
-    <p style="text-align:center; margin-bottom: 1rem;"><a href="index.html" style="color:#38bdf8; text-decoration:underline;">← Powrót do strony głównej</a></p>
+    <p style="text-align:center; margin-bottom: 1rem;">
+      <a href="index.html" style="color:#38bdf8; text-decoration:underline;">← Powrót do strony głównej</a>
+    </p>
+
     <h1>🛡️ Panel Admina – Praktyki</h1>
-    <!-- zawartość panelu -->
+
     <h2>📰 Edytuj Newsy</h2>
     <div id="news-editor">
       <label>Tytuł</label>
@@ -75,13 +116,15 @@
       <button onclick="pobierzJSON()">📥 Pobierz newsy.json</button>
       <div id="news-list"></div>
     </div>
+
     <div style="text-align:center; margin-top: 2rem;">
       <button onclick="wymusAktualizacje()">🔄 Wymuś aktualizację teraz</button>
+      <div id="update-info"></div>
     </div>
   </div>
 
   <script>
-    const hashedPassword = "2c6ee24b09816a6f14f95d1698b24ead"; // ← Podmień na nowy hash (np. z zewnętrznego źródła)
+    const hashedPassword = "2c6ee24b09816a6f14f95d1698b24ead"; 
 
     function md5(string) {
       return CryptoJS.MD5(string).toString();
@@ -94,13 +137,10 @@
         document.getElementById("panel").style.display = "block";
         pokazInfo();
       } else {
-        alert("Błędne hasło");
+        alert("❌ Błędne hasło");
       }
     }
-  </script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
 
-  <script>
     function pokazInfo() {
       const zapis = localStorage.getItem("lastUpdate");
       const info = document.getElementById("update-info");
@@ -109,8 +149,7 @@
         info.textContent = `🕒 Ostatnia aktualizacja: ${data.toLocaleString("pl-PL")}`;
       }
     }
-  </script>
-<script>
+
     let newsy = [];
 
     function dodajNewsa() {
@@ -168,6 +207,6 @@
         newsy = data;
         aktualizujListe();
       });
-</script>
+  </script>
 </body>
 </html>
