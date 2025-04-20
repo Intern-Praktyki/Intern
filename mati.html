@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Panel Admina – Praktyki</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
   <style>
     body::before {
@@ -36,10 +36,29 @@
       text-align: center;
     }
 
-    label {
-      display: block;
-      margin: 1rem 0 0.2rem;
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin: 2rem 0;
     }
+
+    nav button {
+      background: #1a1a1a;
+      color: #ccc;
+      border: 2px solid #38bdf8;
+      border-radius: 5px;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+    }
+
+    nav button.active {
+      background: #38bdf8;
+      color: #000;
+    }
+
+    section { display: none; }
+    section.active { display: block; }
 
     input, textarea, button, select {
       width: 100%;
@@ -66,11 +85,11 @@
     }
 
     .entry {
-      border: 1px solid #3fa34d;
-      border-radius: 4px;
-      padding: 1rem;
-      margin: 1rem 0;
       background: #1a1a1a;
+      padding: 1rem;
+      border-left: 4px solid #38bdf8;
+      border-radius: 8px;
+      margin-bottom: 1rem;
     }
 
     .entry button {
@@ -84,30 +103,6 @@
       font-size: 0.9rem;
       text-align: center;
     }
-
-    nav {
-      display: flex;
-      justify-content: center;
-      margin: 2rem 0;
-      gap: 1rem;
-    }
-
-    nav button {
-      background: #1a1a1a;
-      color: #ccc;
-      border: 2px solid #38bdf8;
-      border-radius: 5px;
-      padding: 0.5rem 1rem;
-      cursor: pointer;
-    }
-
-    nav button.active {
-      background: #38bdf8;
-      color: #000;
-    }
-
-    section { display: none; }
-    section.active { display: block; }
   </style>
 </head>
 <body>
@@ -118,10 +113,7 @@
   </div>
 
   <div id="panel" style="display:none;">
-    <p style="text-align:center; margin-bottom: 1rem;">
-      <a href="index.html" style="color:#38bdf8; text-decoration:underline;">← Powrót do strony głównej</a>
-    </p>
-
+    <p style="text-align:center;"><a href="index.html" style="color:#38bdf8;">← Powrót do strony głównej</a></p>
     <h1>🛡️ Panel Admina – Praktyki</h1>
 
     <nav>
@@ -129,3 +121,168 @@
       <button onclick="switchTab('wydarzenia')">Wydarzenia</button>
       <button onclick="switchTab('raporty')">Raporty</button>
     </nav>
+    <section id="newsy" class="active">
+      <h2>📰 Dodaj news</h2>
+      <label>Tytuł</label><input type="text" id="title">
+      <label>Link</label><input type="url" id="url">
+      <label>Źródło</label><input type="text" id="source">
+      <label>Opis</label><textarea id="description"></textarea>
+      <label>Data</label><input type="date" id="date">
+      <button onclick="dodaj('newsy')">Dodaj</button>
+      <button onclick="pobierzJSON('newsy')">📥 Pobierz newsy.json</button>
+      <div id="lista-newsy"></div>
+    </section>
+
+    <section id="wydarzenia">
+      <h2>📅 Dodaj wydarzenie</h2>
+      <label>Tytuł</label><input type="text" id="etitle">
+      <label>Data</label><input type="date" id="edate">
+      <label>Miejsce</label><input type="text" id="elocation">
+      <label>Opis</label><textarea id="edescription"></textarea>
+      <label>Link</label><input type="url" id="elink">
+      <button onclick="dodaj('wydarzenia')">Dodaj</button>
+      <button onclick="pobierzJSON('wydarzenia')">📥 Pobierz events.json</button>
+      <div id="lista-wydarzenia"></div>
+    </section>
+
+    <section id="raporty">
+      <h2>📊 Dodaj raport</h2>
+      <label>Tytuł</label><input type="text" id="rtitle">
+      <label>Źródło</label><input type="text" id="rsource">
+      <label>Data</label><input type="date" id="rdate">
+      <label>Opis</label><textarea id="rdescription"></textarea>
+      <label>Link</label><input type="url" id="rlink">
+      <button onclick="dodaj('raporty')">Dodaj</button>
+      <button onclick="pobierzJSON('raporty')">📥 Pobierz reports.json</button>
+      <div id="lista-raporty"></div>
+    </section>
+
+    <div style="text-align:center; margin-top: 2rem;">
+      <button onclick="wymusAktualizacje()">🔄 Wymuś aktualizację teraz</button>
+      <div id="update-info"></div>
+    </div>
+  </div>
+<script>
+  const hashedPassword = "2c6ee24b09816a6f14f95d1698b24ead"; // MD5("shoppro")
+
+  function md5(str) {
+    return CryptoJS.MD5(str).toString();
+  }
+
+  function checkPassword() {
+    const pass = document.getElementById("pass").value;
+    if (md5(pass) === hashedPassword) {
+      document.getElementById("login").style.display = "none";
+      document.getElementById("panel").style.display = "block";
+      pokazInfo();
+    } else {
+      alert("❌ Błędne hasło");
+    }
+  }
+
+  function switchTab(tabId) {
+    document.querySelectorAll("nav button").forEach(btn => btn.classList.remove("active"));
+    document.querySelectorAll("section").forEach(sec => sec.classList.remove("active"));
+    document.querySelector(`button[onclick*='${tabId}']`).classList.add("active");
+    document.getElementById(tabId).classList.add("active");
+  }
+
+  function pokazInfo() {
+    const zapis = localStorage.getItem("lastUpdate");
+    const info = document.getElementById("update-info");
+    if (info && zapis) {
+      const data = new Date(zapis);
+      info.textContent = `🕒 Ostatnia aktualizacja: ${data.toLocaleString("pl-PL")}`;
+    }
+  }
+
+  function wymusAktualizacje() {
+    const teraz = new Date();
+    localStorage.setItem("lastUpdate", teraz.toISOString());
+    pokazInfo();
+    alert("✅ Aktualizacja oznaczona. Odśwież stronę, aby zobaczyć zmiany.");
+  }
+
+  const dane = {
+    newsy: [],
+    wydarzenia: [],
+    raporty: []
+  };
+
+  function dodaj(typ) {
+    let obj = {};
+    if (typ === "newsy") {
+      obj = {
+        title: document.getElementById("title").value,
+        link: document.getElementById("url").value,
+        source: document.getElementById("source").value,
+        description: document.getElementById("description").value,
+        date: document.getElementById("date").value
+      };
+    } else if (typ === "wydarzenia") {
+      obj = {
+        title: document.getElementById("etitle").value,
+        date: document.getElementById("edate").value,
+        location: document.getElementById("elocation").value,
+        description: document.getElementById("edescription").value,
+        link: document.getElementById("elink").value
+      };
+    } else if (typ === "raporty") {
+      obj = {
+        title: document.getElementById("rtitle").value,
+        source: document.getElementById("rsource").value,
+        date: document.getElementById("rdate").value,
+        description: document.getElementById("rdescription").value,
+        link: document.getElementById("rlink").value
+      };
+    }
+
+    dane[typ].push(obj);
+    aktualizujListe(typ);
+  }
+
+  function aktualizujListe(typ) {
+    const container = document.getElementById("lista-" + typ);
+    container.innerHTML = "";
+    dane[typ].forEach((el, i) => {
+      const div = document.createElement("div");
+      div.className = "entry";
+      let html = `<strong>${el.title}</strong><br/>`;
+      if (el.source) html += `<em>${el.source} | ${el.date}</em><br/>`;
+      else html += `<em>${el.date}</em><br/>`;
+      if (el.location) html += `<p><strong>Miejsce:</strong> ${el.location}</p>`;
+      if (el.description) html += `<p>${el.description}</p>`;
+      if (el.link) html += `<p><a href="${el.link}" target="_blank">${el.link}</a></p>`;
+      html += `<button onclick="usun('${typ}', ${i})">Usuń</button>`;
+      div.innerHTML = html;
+      container.appendChild(div);
+    });
+  }
+
+  function usun(typ, i) {
+    dane[typ].splice(i, 1);
+    aktualizujListe(typ);
+  }
+
+  function pobierzJSON(typ) {
+    const blob = new Blob([JSON.stringify(dane[typ], null, 2)], { type: "application/json" });
+    const link = document.createElement("a");
+    link.href = URL.createObjectURL(blob);
+    link.download = typ === "newsy" ? "newsy.json" : typ === "wydarzenia" ? "events.json" : "reports.json";
+    link.click();
+  }
+
+  // Automatyczne pobieranie danych z JSON
+  window.addEventListener("DOMContentLoaded", () => {
+    ["newsy", "wydarzenia", "raporty"].forEach((typ) => {
+      fetch(`data/${typ === "newsy" ? "newsy" : typ === "wydarzenia" ? "events" : "reports"}.json`)
+        .then(res => res.json())
+        .then(data => {
+          dane[typ] = data;
+          aktualizujListe(typ);
+        });
+    });
+  });
+</script>
+</body>
+</html>
