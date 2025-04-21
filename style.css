@@ -2,13 +2,13 @@ body {
   font-family: 'Inter', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f9f9f9;
-  color: #333;
+  background-color: #121212;
+  color: #e0e0e0;
 }
 
 header {
-  background-color: #222;
-  color: white;
+  background-color: #1f1f1f;
+  color: #fff;
   padding: 30px 0;
   text-align: center;
 }
@@ -21,35 +21,37 @@ header h1 {
 header p {
   margin-top: 10px;
   font-size: 1rem;
-  opacity: 0.8;
+  opacity: 0.7;
 }
 
 nav {
-  background-color: #eee;
-  padding: 10px;
+  background-color: #1a1a1a;
+  padding: 12px;
   text-align: center;
 }
 
 nav a {
   text-decoration: none;
   margin: 0 15px;
-  color: #333;
+  color: #ccc;
   font-weight: 600;
+  transition: color 0.3s;
 }
 
+nav a:hover,
 nav a.active {
-  color: #007bff;
+  color: #00aaff;
 }
 
 .container {
   max-width: 1000px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 30px 20px;
 }
 
 footer {
-  background-color: #222;
-  color: white;
+  background-color: #1f1f1f;
+  color: #aaa;
   text-align: center;
   padding: 20px;
   font-size: 0.9rem;
@@ -57,19 +59,20 @@ footer {
 }
 
 .report-entry {
-  background-color: white;
+  background-color: #1e1e1e;
   padding: 20px;
   border-radius: 6px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.05);
   margin-bottom: 20px;
 }
 
 .report-entry h3 {
   margin-top: 0;
+  color: #ffffff;
 }
 
 .report-entry a {
-  color: #007bff;
+  color: #00aaff;
   text-decoration: none;
 }
 
@@ -82,9 +85,10 @@ footer {
   max-width: 300px;
   height: auto;
   margin-bottom: 20px;
+  border-radius: 8px;
 }
 
 .under-construction p {
   font-size: 1.2rem;
-  color: #555;
+  color: #bbb;
 }
