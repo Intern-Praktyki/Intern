@@ -1,31 +1,46 @@
-body {
-  font-family: 'Inter', sans-serif;
+/* Reset i ogólne ustawienia */
+* {
   margin: 0;
   padding: 0;
-  background-color: #121212;
-  color: #e0e0e0;
+  box-sizing: border-box;
 }
 
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Layout kontenera */
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px 0;
+}
+
+/* Nagłówek */
 header {
-  background-color: #1f1f1f;
+  background-color: #222;
   color: #fff;
   padding: 30px 0;
   text-align: center;
 }
 
 header h1 {
-  margin: 0;
   font-size: 2.5rem;
+  margin-bottom: 10px;
 }
 
 header p {
-  margin-top: 10px;
   font-size: 1rem;
-  opacity: 0.7;
+  opacity: 0.8;
 }
 
+/* Nawigacja */
 nav {
-  background-color: #1a1a1a;
+  background-color: #eee;
   padding: 12px;
   text-align: center;
 }
@@ -33,56 +48,56 @@ nav {
 nav a {
   text-decoration: none;
   margin: 0 15px;
-  color: #ccc;
+  color: #333;
   font-weight: 600;
   transition: color 0.3s;
 }
 
 nav a:hover,
 nav a.active {
-  color: #00aaff;
+  color: #007bff;
 }
 
-.container {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 30px 20px;
-}
-
-footer {
-  background-color: #1f1f1f;
-  color: #aaa;
-  text-align: center;
-  padding: 20px;
-  font-size: 0.9rem;
-  margin-top: 60px;
-}
-
+/* Karty z treścią: newsy / raporty */
 .report-entry {
-  background-color: #1e1e1e;
+  background-color: #ffffff;
   padding: 20px;
-  border-radius: 6px;
-  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
   margin-bottom: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  border-left: 4px solid #007bff;
+  transition: transform 0.2s ease;
+}
+
+.report-entry:hover {
+  transform: translateY(-2px);
 }
 
 .report-entry h3 {
   margin-top: 0;
-  color: #ffffff;
+  color: #222;
+}
+
+.report-entry p {
+  color: #555;
 }
 
 .report-entry a {
-  color: #00aaff;
+  display: inline-block;
+  margin-top: 10px;
   text-decoration: none;
+  color: #007bff;
+  font-weight: 600;
 }
 
+/* Sekcja "Strona w budowie" */
 .under-construction {
   text-align: center;
   padding: 60px 20px;
 }
 
 .under-construction img {
-  max-width: 300px;
+  max-width: 320px;
   height: auto;
   margin-bottom: 20px;
   border-radius: 8px;
@@ -90,5 +105,15 @@ footer {
 
 .under-construction p {
   font-size: 1.2rem;
-  color: #bbb;
+  color: #555;
+}
+
+/* Stopka */
+footer {
+  background-color: #222;
+  color: #ccc;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 0.9rem;
+  margin-top: 60px;
 }
