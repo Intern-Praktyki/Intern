@@ -1,118 +1,91 @@
-body {
-  margin: 0;
-  font-family: 'Inter', sans-serif;
-  background-color: #0f0f0f;
-  color: #eaeaea;
-  line-height: 1.6;
-}
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Praktyki – Raporty</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      background-color: #f9f9f9;
+    }
+    header, footer {
+      background-color: #222;
+      color: #fff;
+      padding: 20px 0;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+    .container {
+      width: 90%;
+      max-width: 1000px;
+      margin: auto;
+      padding: 20px 0;
+    }
+    nav {
+      background-color: #eee;
+      text-align: center;
+      padding: 10px 0;
+    }
+    nav a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #333;
+      font-weight: 600;
+    }
+    nav a.active {
+      color: #007bff;
+    }
+    .under-construction {
+      text-align: center;
+      padding: 60px 20px;
+    }
+    .under-construction img {
+      max-width: 300px;
+      height: auto;
+      margin-bottom: 20px;
+    }
+    .under-construction p {
+      font-size: 1.2rem;
+      color: #444;
+    }
+    footer p {
+      margin: 0;
+      font-size: 0.9rem;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Praktyki</h1>
+      <p>Strona przygotowana w celach edukacyjnych</p>
+    </div>
+  </header>
 
-.container {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 2rem;
-}
+  <nav>
+    <a href="index.html">Newsy</a>
+    <a href="events.html">Wydarzenia</a>
+    <a href="reports.html" class="active">Raporty</a>
+  </nav>
 
-header {
-  background-color: #1a1a1a;
-  border-bottom: 2px solid #2a2a2a;
-  padding: 1rem 0;
-  text-align: center;
-}
+  <main class="container">
+    <div class="under-construction">
+      <img src="swb.jpg" alt="Strona w budowie">
+      <p>Ta sekcja jest w trakcie budowy. Wkrótce pojawią się tutaj raporty!</p>
+    </div>
+  </main>
 
-header h1 {
-  margin: 0;
-  font-size: 2rem;
-  color: #38bdf8;
-}
-
-header p {
-  margin: 0.5rem 0 0;
-  font-size: 1rem;
-  color: #ccc;
-}
-
-nav {
-  background-color: #1a1a1a;
-  display: flex;
-  justify-content: center;
-  gap: 1.5rem;
-  padding: 0.75rem 0;
-  border-bottom: 2px solid #2a2a2a;
-}
-
-nav a {
-  color: #ccc;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 1rem;
-  border-bottom: 2px solid transparent;
-  transition: all 0.3s ease;
-}
-
-nav a.active,
-nav a:hover {
-  color: #38bdf8;
-  border-color: #38bdf8;
-}
-
-.news-card,
-.event-entry,
-.report-entry {
-  background-color: #1a1a1a;
-  padding: 1rem;
-  border-left: 4px solid #38bdf8;
-  border-radius: 8px;
-  margin-bottom: 1.5rem;
-}
-
-.news-card h2,
-.event-entry h3,
-.report-entry h3 {
-  margin: 0 0 0.5rem;
-  color: #fff;
-}
-
-.news-card p,
-.event-entry p,
-.report-entry p {
-  margin: 0.2rem 0;
-  color: #ccc;
-}
-
-.news-card a,
-.event-entry a,
-.report-entry a {
-  display: inline-block;
-  margin-top: 0.5rem;
-  color: #38bdf8;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-.news-card a:hover,
-.event-entry a:hover,
-.report-entry a:hover {
-  text-decoration: underline;
-}
-
-.calendar-controls {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 2rem 0 1rem;
-}
-
-.calendar-month {
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: #fff;
-}
-
-footer {
-  background-color: #1a1a1a;
-  text-align: center;
-  padding: 2rem;
-  font-size: 0.9rem;
-  color: #aaa;
-  border-top: 1px solid #2a2a2a;
-}
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Praktyki. Projekt edukacyjny o cyberbezpieczeństwie.</p>
+    </div>
+  </footer>
+</body>
+</html>
