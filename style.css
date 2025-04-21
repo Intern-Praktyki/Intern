@@ -1,92 +1,90 @@
-/* Reset podstawowy */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
   font-family: 'Inter', sans-serif;
-  background-color: #f4f6f8;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
   color: #333;
-  line-height: 1.6;
 }
 
-/* Layout */
-.container {
-  width: 90%;
-  max-width: 1000px;
-  margin: auto;
-  padding: 20px 0;
-}
-
-/* Nagłówek */
 header {
-  background-color: #1a1a1a;
-  color: #fff;
+  background-color: #222;
+  color: white;
   padding: 30px 0;
   text-align: center;
 }
 
 header h1 {
+  margin: 0;
   font-size: 2.5rem;
-  margin-bottom: 10px;
 }
 
 header p {
+  margin-top: 10px;
   font-size: 1rem;
   opacity: 0.8;
 }
 
-/* Nawigacja */
 nav {
-  background-color: #e6e6e6;
-  padding: 10px 0;
+  background-color: #eee;
+  padding: 10px;
   text-align: center;
 }
 
 nav a {
-  color: #333;
   text-decoration: none;
-  font-weight: 600;
   margin: 0 15px;
-  transition: color 0.3s ease;
-}
-
-nav a:hover {
-  color: #007bff;
+  color: #333;
+  font-weight: 600;
 }
 
 nav a.active {
   color: #007bff;
 }
 
-/* Sekcja "w budowie" */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+footer {
+  background-color: #222;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+  margin-top: 60px;
+}
+
+.report-entry {
+  background-color: white;
+  padding: 20px;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  margin-bottom: 20px;
+}
+
+.report-entry h3 {
+  margin-top: 0;
+}
+
+.report-entry a {
+  color: #007bff;
+  text-decoration: none;
+}
+
 .under-construction {
   text-align: center;
   padding: 60px 20px;
 }
 
 .under-construction img {
-  max-width: 320px;
-  width: 100%;
+  max-width: 300px;
   height: auto;
   margin-bottom: 20px;
-  border-radius: 12px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
 }
 
 .under-construction p {
   font-size: 1.2rem;
   color: #555;
-}
-
-/* Stopka */
-footer {
-  background-color: #1a1a1a;
-  color: #ccc;
-  text-align: center;
-  padding: 20px 0;
-  font-size: 0.9rem;
-  margin-top: 60px;
 }
