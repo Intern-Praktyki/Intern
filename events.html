@@ -36,64 +36,77 @@
     </div>
   </footer>
 
-  <script>
-    const miesiacePL = ["Styczeń", "Luty", "Marzec", "Kwiecień", "Maj", "Czerwiec", "Lipiec", "Sierpień", "Wrzesień", "Październik", "Listopad", "Grudzień"];
-    let aktualnyMiesiac = new Date().getMonth();
-    let aktualnyRok = new Date().getFullYear();
+<script>
+  const miesiacePL = ["Styczeń", "Luty", "Marzec", "Kwiecień", "Maj", "Czerwiec", "Lipiec", "Sierpień", "Wrzesień", "Październik", "Listopad", "Grudzień"];
+  let aktualnyMiesiac = new Date().getMonth();
+  let aktualnyRok = new Date().getFullYear();
+  let wszystkieWydarzenia = [];
 
-    function zmienMiesiac(delta) {
-      aktualnyMiesiac += delta;
-      if (aktualnyMiesiac > 11) { aktualnyMiesiac = 0; aktualnyRok++; }
-      if (aktualnyMiesiac < 0) { aktualnyMiesiac = 11; aktualnyRok--; }
-      fetchEvents();
+  function zmienMiesiac(delta) {
+    aktualnyMiesiac += delta;
+    if (aktualnyMiesiac > 11) { aktualnyMiesiac = 0; aktualnyRok++; }
+    if (aktualnyMiesiac < 0) { aktualnyMiesiac = 11; aktualnyRok--; }
+    wyswietlWydarzenia();
+  }
+
+  function fetchEvents() {
+    fetch("data/events.json")
+      .then(res => res.json())
+      .then(events => {
+        wszystkieWydarzenia = events.map(e => ({
+          ...e,
+          dataObiektu: new Date(e.date)
+        }));
+        znajdzNajblizszyMiesiacZEventami();
+      })
+      .catch(error => console.error("Błąd podczas ładowania wydarzeń:", error));
+  }
+
+  function znajdzNajblizszyMiesiacZEventami() {
+    const teraz = new Date();
+    const przyszlosc = wszystkieWydarzenia.filter(e => e.dataObiektu >= teraz);
+    if (przyszlosc.length === 0) {
+      wyswietlWydarzenia(); // jeśli nic nie znaleziono – pokaż aktualny miesiąc mimo wszystko
+      return;
     }
 
-    function fetchEventsOncePerDay() {
-      const lastLoad = localStorage.getItem("lastEventsLoad");
-      const now = new Date();
-      const todayAtFour = new Date();
-      todayAtFour.setHours(4, 0, 0, 0);
+    // znajdź najbliższy miesiąc z wydarzeniami
+    przyszlosc.sort((a, b) => a.dataObiektu - b.dataObiektu);
+    const najblizsze = przyszlosc[0].dataObiektu;
+    aktualnyMiesiac = najblizsze.getMonth();
+    aktualnyRok = najblizsze.getFullYear();
+    wyswietlWydarzenia();
+  }
 
-      if (!lastLoad || new Date(lastLoad).toDateString() !== now.toDateString() || (now > todayAtFour && new Date(lastLoad) < todayAtFour)) {
-        fetchEvents();
-        localStorage.setItem("lastEventsLoad", now.toISOString());
-      } else {
-        console.log("Wydarzenia już załadowane dziś.");
-      }
+  function wyswietlWydarzenia() {
+    document.getElementById("miesiac-nazwa").textContent = `${miesiacePL[aktualnyMiesiac]} ${aktualnyRok}`;
+    const lista = document.getElementById("lista-wydarzen");
+    lista.innerHTML = "";
+
+    const wybrane = wszystkieWydarzenia.filter(e =>
+      e.dataObiektu.getMonth() === aktualnyMiesiac &&
+      e.dataObiektu.getFullYear() === aktualnyRok
+    );
+
+    if (wybrane.length === 0) {
+      lista.innerHTML = "<p>Brak wydarzeń w tym miesiącu.</p>";
+      return;
     }
 
-    function fetchEvents() {
-      document.getElementById("miesiac-nazwa").textContent = `${miesiacePL[aktualnyMiesiac]} ${aktualnyRok}`;
-      fetch("data/events.json")
-        .then(res => res.json())
-        .then(events => {
-          const lista = document.getElementById("lista-wydarzen");
-          lista.innerHTML = "";
-          events.filter(e => {
-            const data = new Date(e.date);
-            return data.getMonth() === aktualnyMiesiac && data.getFullYear() === aktualnyRok;
-          }).forEach(e => {
-            const box = document.createElement("div");
-            box.className = "event-entry";
-            box.innerHTML = `
-              <h3>${e.date} – ${e.title}</h3>
-              <p><strong>Miejsce:</strong> ${e.location}</p>
-              <p>${e.description}</p>
-              <a href="${e.link}" target="_blank">Źródło</a>
-            `;
-            lista.appendChild(box);
-          });
-        })
-        .catch(error => console.error("Błąd podczas ładowania wydarzeń:", error));
-    }
+    wybrane.forEach(e => {
+      const box = document.createElement("div");
+      box.className = "event-entry";
+      box.innerHTML = `
+        <h3>${e.date} – ${e.title}</h3>
+        <p><strong>Miejsce:</strong> ${e.location}</p>
+        <p>${e.description}</p>
+        <a href="${e.link}" target="_blank">Źródło</a>
+      `;
+      lista.appendChild(box);
+    });
+  }
 
-    fetchEventsOncePerDay();
-  // Pokaż aktualny miesiąc i wydarzenia od razu po załadowaniu strony
-  document.addEventListener("DOMContentLoaded", () => {
-    zaladujWydarzenia();
-  });
-
-
-  </script>
+  document.addEventListener("DOMContentLoaded", fetchEvents);
+</script>
 </body>
 </html>
