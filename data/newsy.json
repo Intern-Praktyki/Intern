@@ -19,5 +19,11 @@
     "source": "csoonline.com",
     "description": "Społeczność cyberbezpieczeństwa znalazła się o krok od utraty jednej z podstawowych struktur globalnego zarządzania podatnościami – programu MITRE CVE. Wraz z końcem finansowania przez Departament Bezpieczeństwa Krajowego (DHS), MITRE ogłosiło koniec swojej 25-letniej roli jako opiekuna systemu CVE.\n\nChoć sytuacja została uratowana przez CISA, które zapewniło 11-miesięczne przedłużenie finansowania, ujawniło to niepokojącą zależność branży od darmowej infrastruktury zewnętrznej.",
     "date": "2025-04-16"
+  }, {
+    "title": "Ważna aktualizacja Apple: Pilne łatki zabezpieczające krytyczne luki w iOS i macOS",
+    "link": "https://techcrunch.com/2025/04/16/apple-says-zero-day-bugs-exploited-against-specific-targeted-individuals-using-ios/",
+    "source": "techcrunch.com",
+    "description": "Apple wydało nagłe aktualizacje bezpieczeństwa dla iPhone’ów, MacBooków, iPadów, Apple TV oraz Vision Pro po wykryciu dwóch nieznanych wcześniej luk zero-day, które — jak potwierdza sama firma — mogły zostać już wykorzystane w realnych atakach. Według oficjalnego komunikatu, jedna z luk dotyczy systemu audio i umożliwia zdalne wykonanie złośliwego kodu przez specjalnie spreparowany plik multimedialny. Druga pozwala ominąć zabezpieczenia pamięci i wstrzyknąć szkodliwe instrukcje bez wiedzy użytkownika. Eksperci ostrzegają, że ataki mogły być sponsorowane przez państwo i wymierzone w wybranych użytkowników — co czyni sprawę wyjątkowo poważną. Apple zaleca natychmiastowe zainstalowanie aktualizacji, aby zablokować potencjalny dostęp do urządzenia.",
+    "date": "2025-04-16"
   }
 ]
