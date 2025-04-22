@@ -1,5 +1,12 @@
 [
   {
+    "title": "Google na celowniku rządu USA. Departament Sprawiedliwości chce sprzedaży przeglądarki Chrome",
+    "link": "https://www.wsj.com/tech/google-justice-department-search-monopoly-hearing-d527c010?mod=tech_lead_pos1",
+    "source": "wsj.com",
+    "description": "Waszyngton, 2025 – Departament Sprawiedliwości USA rozpoczął nowy etap precedensowego procesu antymonopolowego przeciwko Google, w którym domaga się radykalnych środków: przymusowej sprzedaży przeglądarki Chrome, zniesienia uprzywilejowanych umów z producentami urządzeń oraz zapewnienia konkurencji dostępu do danych.",
+    "date": "2025-04-21"
+  },
+  {
     "title": "Prośba o głos w konkursie. Oszustwo na skale europejską",
     "link": "https://cyberdefence24.pl/cyberbezpieczenstwo/znajomy-prosi-o-glos-w-konkursie-oszustwo-na-skale-europejska",
     "source": "Cyber24",
@@ -19,7 +26,8 @@
     "source": "csoonline.com",
     "description": "Społeczność cyberbezpieczeństwa znalazła się o krok od utraty jednej z podstawowych struktur globalnego zarządzania podatnościami – programu MITRE CVE. Wraz z końcem finansowania przez Departament Bezpieczeństwa Krajowego (DHS), MITRE ogłosiło koniec swojej 25-letniej roli jako opiekuna systemu CVE.\n\nChoć sytuacja została uratowana przez CISA, które zapewniło 11-miesięczne przedłużenie finansowania, ujawniło to niepokojącą zależność branży od darmowej infrastruktury zewnętrznej.",
     "date": "2025-04-16"
-  }, {
+  }, 
+{
     "title": "Ważna aktualizacja Apple: Pilne łatki zabezpieczające krytyczne luki w iOS i macOS",
     "link": "https://techcrunch.com/2025/04/16/apple-says-zero-day-bugs-exploited-against-specific-targeted-individuals-using-ios/",
     "source": "techcrunch.com",
