@@ -13,7 +13,7 @@ function fetchNewsy() {
           <h2>${item.title}</h2>
           <p><strong>Źródło:</strong> ${item.source} | <strong>Data:</strong> ${item.date}</p>
           <p>${item.description}</p>
-          <a href="${item.link}" target="_blank">Czytaj więcej</a>
+          <a href="${item.link}" target="_blank">Źródło</a>
         `;
         container.appendChild(card);
       });
