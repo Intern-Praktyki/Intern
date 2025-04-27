@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Praktyki – Demo Newsy</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Praktyki – Demo</h1>
+      <p>Strona testowa do ładowania newsów</p>
+    </div>
+  </header>
+
+  <nav>
+    <a href="demo.html" class="active">Demo Newsy</a>
+    <a href="events.html">Wydarzenia</a>
+    <a href="reports.html">Raporty</a>
+  </nav>
+
+  <main class="container">
+    <div id="demo-news-container"></div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Praktyki. Projekt testowy do nauki GitHub Pages.</p>
+    </div>
+  </footer>
+
+  <script>
+    function fetchDemoNewsyOncePerDay() {
+      const lastLoadDemo = localStorage.getItem("lastDemoNewsLoad");
+      const now = new Date();
+      const todayAtFourDemo = new Date();
+      todayAtFourDemo.setHours(4, 0, 0, 0);
+
+      if (!lastLoadDemo || new Date(lastLoadDemo).toDateString() !== now.toDateString() || (now > todayAtFourDemo && new Date(lastLoadDemo) < todayAtFourDemo)) {
+        fetchDemoNewsy();
+        localStorage.setItem("lastDemoNewsLoad", now.toISOString());
+      } else {
+        console.log("Demo newsy już załadowane dziś.");
+      }
+    }
+
+    function fetchDemoNewsy() {
+      fetch("data/demo.json")
+        .then(res => res.json())
+        .then(demoNews => {
+          const container = document.getElementById("demo-news-container");
+          container.innerHTML = "";
+          demoNews.forEach(item => {
+            const card = document.createElement("div");
+            card.className = "demo-news-card";
+            card.innerHTML = `
+              <h2>${item.title}</h2>
+              <p><strong>Źródło:</strong> ${item.source} | <strong>Data:</strong> ${item.date}</p>
+              ${item.description ? `<p>${item.description}</p>` : ""}
+              <a href="${item.link}" target="_blank">Czytaj więcej</a>
+            `;
+            container.appendChild(card);
+          });
+        })
+        .catch(error => console.error("Błąd podczas ładowania demo newsów:", error));
+    }
+
+    fetchDemoNewsyOncePerDay();
+  </script>
+</body>
+</html>
