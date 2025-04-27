@@ -1,0 +1,44 @@
+[
+  {
+    "title": "Google na celowniku rządu USA. Departament Sprawiedliwości chce sprzedaży przeglądarki Chrome",
+    "link": "https://www.wsj.com/tech/google-justice-department-search-monopoly-hearing-d527c010?mod=tech_lead_pos1",
+    "source": "test",
+    "description": "Waszyngton, 2025 – Departament Sprawiedliwości USA rozpoczął nowy etap precedensowego procesu antymonopolowego przeciwko Google, w którym domaga się radykalnych środków: przymusowej sprzedaży przeglądarki Chrome, zniesienia uprzywilejowanych umów z producentami urządzeń oraz zapewnienia konkurencji dostępu do danych.",
+    "date": "2025-04-21"
+  },
+  {
+    "title": "Człowiek kontra maszyna: humanoidalne roboty pobiegły w półmaratonie w Pekinie",
+    "link": "https://www.wsj.com/tech/man-versus-machine-as-china-shows-off-humanoid-robots-in-half-marathon-75d7e766?mod=tech_lead_pos4",
+    "source": "wsj.com",
+    "description": "Podczas niezwykłego półmaratonu zorganizowanego w sobotę w stolicy Chin wystartowało nie tylko kilka tysięcy ludzi, ale też... 21 humanoidalnych robotów. Wydarzenie było pierwszym tego rodzaju i miało być pokazem chińskich ambicji technologicznych, zwłaszcza w kontekście rosnącej rywalizacji z USA. Chiny ogłosiły, że chcą zostać światowym liderem w robotyce humanoidalnej do 2027 roku.",
+    "date": "2025-04-19"
+  },
+  {
+    "title": "Prośba o głos w konkursie. Oszustwo na skale europejską",
+    "link": "https://cyberdefence24.pl/cyberbezpieczenstwo/znajomy-prosi-o-glos-w-konkursie-oszustwo-na-skale-europejska",
+    "source": "Cyber24",
+    "description": "Przejmowanie kont w mediach społecznościowych przez cyberprzestępców ma miejsce w całej Europie. Okazuje się jednak, że sposoby stosowane w stosunku do Polaków są inne od tych, które pojawiają się na zachodzie kontynentu.",
+    "date": "2025-04-18"
+  },
+ {
+    "title": "Północnokoreańscy hakerzy podszywają się pod rekruterów, infekując deweloperów złośliwym kodem",
+    "link": "https://cointelegraph.com/news/north-korea-hackers-crypto-developers-fake-jobs",
+    "source": "cointelegraph.com",
+    "description": "Grupa hakerska powiązana z atakiem na giełdę Bybit o wartości 1,4 miliarda dolarów ponownie zaatakowała — tym razem uderza w deweloperów Web3, podszywając się pod rekruterów technologicznych. Według raportu The Hacker News, ataki polegają na rozsyłaniu fałszywych testów rekrutacyjnych zawierających malware typu stealer.",
+    "date": "2025-04-17"
+  },
+  {
+    "title": "Kryzys finansowania CVE",
+    "link": "https://www.csoonline.com/article/3963190/cve-program-faces-swift-end-after-dhs-fails-to-renew-contract-leaving-security-flaw-tracking-in-limbo.html",
+    "source": "csoonline.com",
+    "description": "Społeczność cyberbezpieczeństwa znalazła się o krok od utraty jednej z podstawowych struktur globalnego zarządzania podatnościami – programu MITRE CVE. Wraz z końcem finansowania przez Departament Bezpieczeństwa Krajowego (DHS), MITRE ogłosiło koniec swojej 25-letniej roli jako opiekuna systemu CVE.\n\nChoć sytuacja została uratowana przez CISA, które zapewniło 11-miesięczne przedłużenie finansowania, ujawniło to niepokojącą zależność branży od darmowej infrastruktury zewnętrznej.",
+    "date": "2025-04-16"
+  }, 
+{
+    "title": "Ważna aktualizacja Apple: Pilne łatki zabezpieczające krytyczne luki w iOS i macOS",
+    "link": "https://techcrunch.com/2025/04/16/apple-says-zero-day-bugs-exploited-against-specific-targeted-individuals-using-ios/",
+    "source": "techcrunch.com",
+    "description": "Apple wydało nagłe aktualizacje bezpieczeństwa dla iPhone’ów, MacBooków, iPadów, Apple TV oraz Vision Pro po wykryciu dwóch nieznanych wcześniej luk zero-day, które — jak potwierdza sama firma — mogły zostać już wykorzystane w realnych atakach. Według oficjalnego komunikatu, jedna z luk dotyczy systemu audio i umożliwia zdalne wykonanie złośliwego kodu przez specjalnie spreparowany plik multimedialny. Druga pozwala ominąć zabezpieczenia pamięci i wstrzyknąć szkodliwe instrukcje bez wiedzy użytkownika. Eksperci ostrzegają, że ataki mogły być sponsorowane przez państwo i wymierzone w wybranych użytkowników — co czyni sprawę wyjątkowo poważną. Apple zaleca natychmiastowe zainstalowanie aktualizacji, aby zablokować potencjalny dostęp do urządzenia.",
+    "date": "2025-04-16"
+  }
+]
