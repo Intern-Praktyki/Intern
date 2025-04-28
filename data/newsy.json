@@ -1,5 +1,12 @@
 [
-  {
+    {
+    "title": "Watykan cyfrową twierdzą: przygotowania do konklawe",
+    "link": "https://cybernews.com/security/vatican-cybersecurity-vote-pope/",
+    "source": "cybernews.com",
+    "description": "W maju 2020 roku chińska grupa hakerska RedDelta miała według doniesień włamać się do sieci Watykanu. Atak nastąpił podczas negocjacji między Stolicą Apostolską a Chinami w sprawie mianowania biskupów. Hakerzy wykorzystali spreparowane e-maile zawierające złośliwe oprogramowanie, odwołujące się do tematów katolickich i dyplomatycznych. Atak RedDelta był elementem szerszej walki o wpływy nad Kościołem katolickim w Chinach. Watykan, który tradycyjnie nie komentował incydentów cyberbezpieczeństwa, jeszcze przed tym atakiem zatrudnił eksperta Gianlucę Gauzzi Broccolettiego. Pod jego kierownictwem zmodernizowano zabezpieczenia, kładąc nacisk na analizę zagrożeń opartą na sztucznej inteligencji i cyfrową kryminalistykę. Wcześniejsze problemy z bezpieczeństwem, jak wycieki dokumentów w latach 2012 i 2015, ujawniły słabości w zarządzaniu informacją wewnętrzną. Podczas obecnego konklawe obowiązuje pełna izolacja cyfrowa: brak telefonów, zagłuszacze sygnałów, monitoring kamerami i brak dostępu do sieci. Gwardia Watykańska korzysta z szyfrowanej komunikacji, systemów air-gap oraz narzędzi opartych na AI w celu wykrywania zagrożeń. Doświadczenia z 2020 roku przyczyniły się do znaczącego wzmocnienia ochrony cyfrowej Watykanu, co ma kluczowe znaczenie dla bezpiecznego przebiegu wyboru nowego papieża.",
+    "date": "2025-04-27"
+  },
+{
     "title": "Google na celowniku rządu USA. Departament Sprawiedliwości chce sprzedaży przeglądarki Chrome",
     "link": "https://www.wsj.com/tech/google-justice-department-search-monopoly-hearing-d527c010?mod=tech_lead_pos1",
     "source": "wsj.com",
