@@ -1,94 +1,93 @@
 [
-{
-  "tytul": "CERT Orange Polska – Raport 2024",
-  "data": "styczeń 2025",
-  "motyw_przewodni": "Liczba zagrożeń rośnie, ale skuteczność obrony również – dzięki AI, automatyzacji i edukacji.",
-  "fakty": [
-    "305 tys. zablokowanych domen phishingowych, w tym z użyciem wildcard blocking",
-    "4,85 mln użytkowników ochronionych przed utratą danych i pieniędzy",
-    "Najczęstsze incydenty: phishing, DDoS oraz infekcje malware (np. Remcos RAT, Lumma Stealer)",
-    "Nowe zagrożenia: CoinLurker (kryptowaluty), ataki na OTT, platformy e-finansowe i bankowość mobilną",
-    "Rosnące zagrożenie: Malware-as-a-Service i ataki przez łańcuchy dostaw"
-  ],
-  "zrodlo": "https://cert.orange.pl/raporty-cert-orange-polska/"
-},
-{
-  "tytul": "Verizon – DBIR 2024",
-  "data": "kwiecień 2024",
-  "motyw_przewodni": "Czynniki ludzkie – takie jak błędy, phishing i pośpiech – są głównym powodem naruszeń. Ransomware i motyw finansowy dominują w krajobrazie zagrożeń.",
-  "fakty": [
-    "30 458 incydentów, z czego 10 626 zakończyło się naruszeniem danych",
-    "68% naruszeń zawierało element błędu ludzkiego, np. kliknięcie w phishing lub błędna konfiguracja",
-    "94,6% ataków miało motyw finansowy – głównie kradzież danych, szantaż i wyłudzenia",
-    "32% przypadków dotyczyło ransomware lub form wymuszeń (extortion)",
-    "Najczęstsze wektory: e-mail (phishing), aplikacje webowe, dostęp przez VPN lub słabe hasła"
-  ],
-  "zrodlo": "https://www.verizon.com/business/resources/reports/2024-dbir-data-breach-investigations-report.pdf"
-},
-{
-  "tytul": "Cyberbezpieczny Portfel 2024",
-  "data": "październik 2024",
-  "motyw_przewodni": "Polacy coraz lepiej rozumieją zagrożenia, ale tylko niewielki odsetek czuje się bezpiecznie online – edukacja i świadomość to klucz.",
-  "fakty": [
-    "60% Polaków najbardziej obawia się wyłudzenia danych osobowych",
-    "Tylko 6% zdecydowanie czuje się bezpiecznie w cyfrowym świecie",
-    "Najczęstsze zagrożenia to phishing, fałszywe sklepy i SMS-y z linkami",
-    "52% osób obawia się bezpośredniej utraty pieniędzy",
-    "Raport promuje 10 zasad cyberbezpieczeństwa jako fundament ochrony"
-  ],
-  "zrodlo": "https://www.wib.org.pl/raport-cyberbezpieczny-portfel"
-},
-{
-  "tytul": "ENISA – NIS360 Report 2024",
-  "data": "luty 2025",
-  "motyw_przewodni": "Europa nie jest jeszcze gotowa na wdrożenie NIS2 – brakuje ćwiczeń, koordynacji i dojrzałości w wielu sektorach.",
-  "fakty": [
-    "Raport obejmuje 22 sektory uznane za krytyczne w ramach NIS2:contentReference[oaicite:0]{index=0}",
-    "Sektory zdrowia, ICT service management, administracji publicznej i gazowy należą do najniżej ocenionych pod względem dojrzałości:contentReference[oaicite:1]{index=1}",
-    "Brak transgranicznych ćwiczeń osłabia przygotowanie UE na incydenty o szerokim zasięgu:contentReference[oaicite:2]{index=2}",
-    "Nierównomierna dojrzałość sektorów pokazuje potrzebę lepszej koordynacji działań na poziomie UE:contentReference[oaicite:3]{index=3}",
-    "Raport opublikowany w lutym 2025, bazuje na danych zebranych w 2024 roku:contentReference[oaicite:4]{index=4}"
-  ],
-  "zrodlo": "https://www.enisa.europa.eu/publications/enisa-nis360-2024"
+  {
+    "tytul": "CERT Orange Polska – Raport 2024",
+    "data": "styczeń 2025",
+    "motyw_przewodni": "Liczba zagrożeń rośnie, ale skuteczność obrony również – dzięki AI, automatyzacji i edukacji.",
+    "fakty": [
+      "305 tys. zablokowanych domen phishingowych, w tym z użyciem wildcard blocking",
+      "4,85 mln użytkowników ochronionych przed utratą danych i pieniędzy",
+      "Najczęstsze incydenty: phishing, DDoS oraz infekcje malware (np. Remcos RAT, Lumma Stealer)",
+      "Nowe zagrożenia: CoinLurker (kryptowaluty), ataki na OTT, platformy e-finansowe i bankowość mobilną",
+      "Rosnące zagrożenie: Malware-as-a-Service i ataki przez łańcuchy dostaw"
+    ],
+    "zrodlo": "https://cert.orange.pl/raporty-cert-orange-polska/"
   },
-{
-  "tytul": "KPMG – Barometr Cyberbezpieczeństwa 2024",
-  "data": "luty 2024",
-  "motyw_przewodni": "Firmy coraz lepiej rozumieją zagrożenia, ale brakuje im ludzi, zasobów i planów – outsourcing rośnie, a phishing wciąż króluje.",
-  "fakty": [
-    "66% firm zarejestrowało przynajmniej jeden incydent cyberbezpieczeństwa:contentReference[oaicite:0]{index=0}",
-    "Phishing niezmiennie uznawany jest za główne zagrożenie:contentReference[oaicite:1]{index=1}",
-    "84% firm outsourcuje przynajmniej jedną funkcję cyberbezpieczeństwa:contentReference[oaicite:2]{index=2}",
-    "Największym problemem jest brak specjalistów – trudności z rekrutacją i utrzymaniem kadry:contentReference[oaicite:3]{index=3}",
-    "Obawy przed zorganizowanymi grupami cyberprzestępczymi spadły o 17 punktów procentowych:contentReference[oaicite:4]{index=4}"
-  ],
-  "zrodlo": "https://home.kpmg/pl/pl/home/insights/2024/02/barometr-cyberbezpieczenstwa-2024.html"
-}
-
+  {
+    "tytul": "Verizon – DBIR 2024",
+    "data": "kwiecień 2024",
+    "motyw_przewodni": "Czynniki ludzkie – takie jak błędy, phishing i pośpiech – są głównym powodem naruszeń. Ransomware i motyw finansowy dominują w krajobrazie zagrożeń.",
+    "fakty": [
+      "30 458 incydentów, z czego 10 626 zakończyło się naruszeniem danych",
+      "68% naruszeń zawierało element błędu ludzkiego, np. kliknięcie w phishing lub błędna konfiguracja",
+      "94,6% ataków miało motyw finansowy – głównie kradzież danych, szantaż i wyłudzenia",
+      "32% przypadków dotyczyło ransomware lub form wymuszeń (extortion)",
+      "Najczęstsze wektory: e-mail (phishing), aplikacje webowe, dostęp przez VPN lub słabe hasła"
+    ],
+    "zrodlo": "https://www.verizon.com/business/resources/reports/2024-dbir-data-breach-investigations-report.pdf"
   },
-{
-  "tytul": "BIK – Raport Antyfraudowy 2024",
-  "data": "styczeń 2024",
-  "fakty": [
-    "Ponad 1/3 Polaków (37%) zetknęła się z próbą oszustwa – głównie w formie phishingu, wiadomości SMS i fałszywych inwestycji.",
-    "5 najczęstszych metod fraudów to m.in. wyłudzenia „na BLIKa”, fałszywe faktury, linki do złośliwych stron i podszywanie się pod urzędy.",
-    "77% firm nie wdraża żadnych narzędzi ochrony przed fraudami, mimo że 12% korporacji straciło w 2023 roku ponad 10 milionów zł.",
-    "Wśród firm rośnie świadomość zagrożeń, ale główną barierą pozostaje brak wiedzy i obawa przed kosztami – zwłaszcza w MŚP.",
-    "56% wszystkich wykrytych fraudów pochodziło od zorganizowanych grup przestępczych – według deklaracji samych firm."
-  ],
-  "zrodlo": "https://rozwiazania-antyfraudowe.bik.pl/raporty"
-},
-{
-  "tytul": "Microsoft Digital Defense Report 2024",
-  "data": "październik 2024",
-  "fakty": [
-    "Microsoft obserwuje ponad 4 000 prób ataków ransomware każdego dnia – coraz więcej z nich opiera się na automatyzacji i sztucznej inteligencji, co skraca czas ataku z dni do minut.",
-    "Grupa Octo Tempest, znana z brutalnych włamań i szantaży, została uznana przez FBI za jedno z trzech najpoważniejszych zagrożeń cybernetycznych – obok Chin i Rosji.",
-    "W odpowiedzi na globalne zagrożenia Microsoft wspiera platformę Crystal Ball w ramach koalicji 60 państw (CRI), która umożliwia dzielenie się danymi wywiadowczymi w czasie rzeczywistym.",
-    "Kampanie phishingowe coraz częściej wykorzystują deepfake’i i generatywne obrazy – sztuczna inteligencja pozwala przestępcom odtwarzać twarze, głosy i style pisania.",
-    "Rośnie liczba przypadków przejmowania kont z pominięciem uwierzytelniania wieloskładnikowego (MFA), m.in. poprzez ataki typu pass-the-cookie i kradzież tokenów sesji."
-  ],
-  "zrodlo": "https://www.microsoft.com/en-us/security/security-insider/intelligence-reports/microsoft-digital-defense-report-2024"
-}
-
+  {
+    "tytul": "Cyberbezpieczny Portfel 2024",
+    "data": "październik 2024",
+    "motyw_przewodni": "Polacy coraz lepiej rozumieją zagrożenia, ale tylko niewielki odsetek czuje się bezpiecznie online – edukacja i świadomość to klucz.",
+    "fakty": [
+      "60% Polaków najbardziej obawia się wyłudzenia danych osobowych",
+      "Tylko 6% zdecydowanie czuje się bezpiecznie w cyfrowym świecie",
+      "Najczęstsze zagrożenia to phishing, fałszywe sklepy i SMS-y z linkami",
+      "52% osób obawia się bezpośredniej utraty pieniędzy",
+      "Raport promuje 10 zasad cyberbezpieczeństwa jako fundament ochrony"
+    ],
+    "zrodlo": "https://www.wib.org.pl/raport-cyberbezpieczny-portfel"
+  },
+  {
+    "tytul": "ENISA – NIS360 Report 2024",
+    "data": "luty 2025",
+    "motyw_przewodni": "Europa nie jest jeszcze gotowa na wdrożenie NIS2 – brakuje ćwiczeń, koordynacji i dojrzałości w wielu sektorach.",
+    "fakty": [
+      "Raport obejmuje 22 sektory uznane za krytyczne w ramach NIS2",
+      "Sektory zdrowia, ICT service management, administracji publicznej i gazowy należą do najniżej ocenionych pod względem dojrzałości",
+      "Brak transgranicznych ćwiczeń osłabia przygotowanie UE na incydenty o szerokim zasięgu",
+      "Nierównomierna dojrzałość sektorów pokazuje potrzebę lepszej koordynacji działań na poziomie UE",
+      "Raport opublikowany w lutym 2025, bazuje na danych zebranych w 2024 roku"
+    ],
+    "zrodlo": "https://www.enisa.europa.eu/publications/enisa-nis360-2024"
+  },
+  {
+    "tytul": "KPMG – Barometr Cyberbezpieczeństwa 2024",
+    "data": "luty 2024",
+    "motyw_przewodni": "Firmy coraz lepiej rozumieją zagrożenia, ale brakuje im ludzi, zasobów i planów – outsourcing rośnie, a phishing wciąż króluje.",
+    "fakty": [
+      "66% firm zarejestrowało przynajmniej jeden incydent cyberbezpieczeństwa",
+      "Phishing niezmiennie uznawany jest za główne zagrożenie",
+      "84% firm outsourcuje przynajmniej jedną funkcję cyberbezpieczeństwa",
+      "Największym problemem jest brak specjalistów – trudności z rekrutacją i utrzymaniem kadry",
+      "Obawy przed zorganizowanymi grupami cyberprzestępczymi spadły o 17 punktów procentowych"
+    ],
+    "zrodlo": "https://home.kpmg/pl/pl/home/insights/2024/02/barometr-cyberbezpieczenstwa-2024.html"
+  },
+  {
+    "tytul": "BIK – Raport Antyfraudowy 2024",
+    "data": "styczeń 2024",
+    "motyw_przewodni": "Przestępcy wykorzystują socjotechnikę i słabości organizacyjne – szczególnie dotkliwe dla MŚP.",
+    "fakty": [
+      "Ponad 1/3 Polaków (37%) zetknęła się z próbą oszustwa – głównie phishing, SMS-y i fałszywe inwestycje",
+      "5 najczęstszych metod fraudów to m.in. wyłudzenia „na BLIKa”, fałszywe faktury, linki do złośliwych stron i podszywanie się pod urzędy",
+      "77% firm nie wdraża narzędzi ochrony przed fraudami, mimo że 12% dużych firm straciło w 2023 roku ponad 10 mln zł",
+      "Firmy wskazują brak wiedzy i wysokie koszty jako główne bariery wdrażania zabezpieczeń",
+      "56% fraudów pochodziło od zorganizowanych grup przestępczych – według deklaracji firm"
+    ],
+    "zrodlo": "https://rozwiazania-antyfraudowe.bik.pl/raporty"
+  },
+  {
+    "tytul": "Microsoft Digital Defense Report 2024",
+    "data": "październik 2024",
+    "motyw_przewodni": "Tożsamość cyfrowa i zautomatyzowane ataki napędzane AI stają się głównym polem walki w cyberprzestrzeni.",
+    "fakty": [
+      "Microsoft obserwuje ponad 4 000 prób ataków ransomware każdego dnia – coraz więcej z nich wykorzystuje automatyzację i AI",
+      "Grupa Octo Tempest została uznana przez FBI za jedno z trzech największych cyberzagrożeń – obok Chin i Rosji",
+      "Microsoft wspiera platformę Crystal Ball w ramach CRI – 60 państw wymieniających dane wywiadowcze w czasie rzeczywistym",
+      "Phishing z użyciem AI i deepfake’ów staje się coraz bardziej przekonujący – odtworzenie głosów, twarzy i stylów pisania",
+      "Wzrost przejęć kont mimo MFA – przez kradzież tokenów sesji i ataki typu pass-the-cookie"
+    ],
+    "zrodlo": "https://www.microsoft.com/en-us/security/security-insider/intelligence-reports/microsoft-digital-defense-report-2024"
+  }
 ]
