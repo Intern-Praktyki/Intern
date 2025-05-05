@@ -1,71 +1,17 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Raporty</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Raporty Cyberbezpieczeństwa 2024</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <style>
-    body {
-      font-family: 'Inter', sans-serif;
-      margin: 0;
-      background-color: #f9f9f9;
-    }
-    header, footer {
-      background-color: #222;
-      color: #fff;
-      padding: 20px 0;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2rem;
-    }
-    .container {
-      width: 90%;
-      max-width: 1000px;
-      margin: auto;
-      padding: 20px 0;
-    }
-    nav {
-      background-color: #eee;
-      text-align: center;
-      padding: 10px 0;
-    }
-    nav a {
-      margin: 0 10px;
-      text-decoration: none;
-      color: #333;
-      font-weight: 600;
-    }
-    nav a.active {
-      color: #007bff;
-    }
-    .under-construction {
-      text-align: center;
-      padding: 60px 20px;
-    }
-    .under-construction img {
-      max-width: 300px;
-      height: auto;
-      margin-bottom: 20px;
-    }
-    .under-construction p {
-      font-size: 1.2rem;
-      color: #444;
-    }
-    footer p {
-      margin: 0;
-      font-size: 0.9rem;
-      text-align: center;
-    }
-  </style>
 </head>
 <body>
   <header>
     <div class="container">
-      <h1>Praktyki</h1>
-      <p>Strona przygotowana w celach edukacyjnych</p>
+      <h1>Praktyki – Raporty</h1>
+      <p>Podsumowania najważniejszych raportów z 2024 roku</p>
     </div>
   </header>
 
@@ -76,10 +22,7 @@
   </nav>
 
   <main class="container">
-    <div class="under-construction">
-      <img src="swb.jpg" alt="Strona w budowie">
-      <p>Ta sekcja jest w trakcie budowy. Wkrótce pojawią się tutaj raporty!</p>
-    </div>
+    <div id="raporty-demo-container"></div>
   </main>
 
   <footer>
@@ -87,5 +30,29 @@
       <p>&copy; 2025 Praktyki. Projekt edukacyjny o cyberbezpieczeństwie.</p>
     </div>
   </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      fetch("data/reports.json")
+        .then(res => res.json())
+        .then(reports => {
+          const container = document.getElementById("raporty-demo-container");
+          container.innerHTML = "";
+          reports.forEach(r => {
+            const box = document.createElement("div");
+            box.className = "report-entry";
+            box.innerHTML = `
+              <h3>${r.tytul}</h3>
+              <p><strong>Data:</strong> ${r.data}</p>
+              <p><strong>Wnioski:</strong> ${r.motyw_przewodni}</p>
+              <ul>${r.fakty.map(f => `<li>${f}</li>`).join("")}</ul>
+              <a href="${r.zrodlo}" target="_blank">Źródło</a>
+            `;
+            container.appendChild(box);
+          });
+        })
+        .catch(err => console.error("Błąd ładowania raportów:", err));
+    });
+  </script>
 </body>
 </html>
