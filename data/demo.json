@@ -32,6 +32,19 @@
   "zrodlo": "https://www.verizon.com/business/resources/reports/2025-dbir-data-breach-investigations-report.pdf"
 },
   {
+  "tytul": "Space Threat Landscape Report 2025",
+  "data": "marzec 2025",
+  "motyw_przewodni": "Rosnąca liczba satelitów i uzależnienie od usług kosmicznych sprawiają, że sektor ten staje się coraz atrakcyjniejszym celem dla cyberataków. Złożoność zagrożeń wymaga ochrony na każdym etapie cyklu życia satelity.",
+  "fakty": [
+    "Najczęstsze zagrożenia to zakłócanie sygnału (jamming), przejmowanie systemów (hijacking) i eksploatacja sieci komputerowych (CNE)",
+    "Spoofing, podsłuch, broń antysatelitarna (ASAT) oraz ataki na funkcje sterujące są rzadziej spotykane, ale mają potencjalnie poważne skutki",
+    "Zagrożenia mogą prowadzić do poważnych konsekwencji fizycznych, ekonomicznych i społecznych, w tym zakłóceń w łańcuchach dostaw i usługach krytycznych jak lotnictwo",
+    "Rosnące ryzyko wynika z zastosowania komponentów komercyjnych (COTS), słabego uwzględnienia bezpieczeństwa w projektowaniu oraz niskiej dojrzałości sektora w zakresie cyberbezpieczeństwa",
+    "Wprowadzono europejskie centrum wymiany informacji – EU Space ISAC – oraz zalecenia „security by design” i „security by default” jako podstawę dla przyszłych standardów"
+  ],
+  "zrodlo": "https://www.enisa.europa.eu/publications/enisa-space-threat-landscape-2025"
+},
+  {
     "tytul": "ENISA – NIS360 Report 2024",
     "data": "luty 2025",
     "motyw_przewodni": "Europa nie jest jeszcze gotowa na NIS2 – brakuje ćwiczeń transgranicznych, koordynacji i dojrzałości sektorowej.",
