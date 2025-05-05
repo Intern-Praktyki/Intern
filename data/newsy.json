@@ -1,4 +1,18 @@
 [
+    {
+    "title": "Rosyjska grupa hakerów atakuje strony internetowe rządu rumuńskiego w dniu wyborów",
+    "link": "https://www.politico.eu/article/russia-hacker-group-romania-election-day-constitutional-court-vote/",
+    "source": "politico.eu",
+    "description": "Rosyjska grupa hakerska NoName057 (DDOSIA) przeprowadziła w dniu wyborów prezydenckich w Rumunii atak DDoS na strony rządowe i kandydatów, w tym Trybunał Konstytucyjny, MSZ oraz portale Crina Antonescu i Nicușora Dana. Ataki miały charakter zakłócający, ale wszystkie serwisy przywrócono do działania.",
+    "date": "2025-05-04"
+  },   
+    {
+    "title": "Luksusowy dom towarowy Harrods potwierdził, że padł ofiarą próby włamania do swoich systemów.",
+    "link": "https://www.bbc.com/news/articles/c62x4zxe418o",
+    "source": "bbc.com",
+    "description": "Trzy duże brytyjskie firmy handlowe – dom towarowy Harrods, sieć spożywcza Co-op oraz detalista odzieżowy Marks & Spencer – padły ofiarą cyberataków. Harrods potwierdził próbę włamania do swoich systemów i w odpowiedzi ograniczył dostęp do internetu w punktach sprzedaży. Sklepy stacjonarne oraz sprzedaż online działają normalnie. Marks & Spencer odnotował znacznie poważniejsze zakłócenia – jego sklep internetowy pozostaje niedostępny, a w wielu lokalizacjach brakuje towarów. Eksperci podejrzewają, że firma padła ofiarą ataku typu ransomware, prawdopodobnie ze strony grupy DragonForce.",
+    "date": "2025-05-01"
+  },
 {
     "title": "Blackout w Hiszpanii i Portugalii. Trwa analiza przyczyn",
     "link": "https://www.wsj.com/world/europe/spain-power-outage-updates-5e14b05a?st=mMpM6N&reflink=desktopwebshare_permalink",
