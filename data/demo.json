@@ -20,6 +20,18 @@
     "zrodlo": "https://cert.orange.pl/raporty-cert-orange-polska/"
   },
   {
+  "tytul": "Verizon – Data Breach Investigations Report 2025",
+  "data": "Kwiecień 2025",
+  "motyw_przewodni": "Rok 2025 przynosi kolejne dowody na to, że czynnik ludzki wciąż pozostaje najsłabszym ogniwem – błąd, phishing i brak podstawowych zabezpieczeń to główne przyczyny naruszeń.",
+  "fakty": [
+    "68% naruszeń miało związek z błędem człowieka – najczęściej kliknięciem w phishing lub błędną konfiguracją",
+    "32% przypadków obejmowało ransomware lub inne formy wymuszeń (extortion), często bez szyfrowania danych",
+    "95% motywowanych było względami finansowymi – od kradzieży po szantaż",
+    "Główne wektory ataku: e-mail (phishing), aplikacje webowe i wykorzystanie słabych lub wyciekłych haseł"
+  ],
+  "zrodlo": "https://www.verizon.com/business/resources/reports/2025-dbir-data-breach-investigations-report.pdf"
+},
+  {
     "tytul": "ENISA – NIS360 Report 2024",
     "data": "luty 2025",
     "motyw_przewodni": "Europa nie jest jeszcze gotowa na NIS2 – brakuje ćwiczeń transgranicznych, koordynacji i dojrzałości sektorowej.",
@@ -31,6 +43,19 @@
       "Raport bazuje na danych zebranych w 2024 roku"
     ],
     "zrodlo": "https://www.enisa.europa.eu/publications/enisa-nis360-2024"
+  },
+  {
+  "tytul": "Verizon – Payment Security Report 2024",
+  "data": "październik 2024",
+  "motyw_przewodni": "Po raz pierwszy od 10 lat większość firm nie spełnia już minimalnych wymagań PCI DSS – to znak, że presja rośnie szybciej niż gotowość organizacji.",
+  "fakty": [
+    "Tylko 43,4% organizacji spełnia wszystkie wymagania standardu PCI DSS – to najniższy wynik od 10 lat.",
+    "Najczęstszym obszarem niespełnienia są kontrole ciągłości – aż 79% organizacji nie spełniało wymagań związanych z ich utrzymaniem.",
+    "Branże o najwyższej zgodności: płatności detaliczne i usługi finansowe; najgorzej wypadła administracja i sektor publiczny.",
+    "Jednym z głównych trendów w 2024 r. jest nacisk na automatyzację i integrację bezpieczeństwa z DevOps oraz architekturami chmurowymi.",
+    "Raport ostrzega przed 'compliance fatigue' – firmy wdrażają procedury jedynie formalnie, bez rzeczywistego bezpieczeństwa."
+  ],
+  "zrodlo": "https://www.verizon.com/business/resources/reports/2024-payment-security-report.pdf"
   },
   {
     "tytul": "Microsoft Digital Defense Report 2024",
@@ -83,7 +108,19 @@
       "Najczęstsze wektory: e-mail (phishing), wykorzystanie słabych poświadczeń, ataki na serwery webowe"
     ],
     "zrodlo": "https://www.verizon.com/business/resources/reports/2024-dbir-data-breach-investigations-report.pdf"
-  },
+  },{
+  "tytul": "Verizon – Mobile Security Index 2024",
+  "data": "kwiecień 2024",
+  "motyw_przewodni": "Rosnąca liczba urządzeń mobilnych i IoT powiększa powierzchnię ataku szybciej, niż firmy rozwijają ochronę – szczególnie w sektorze infrastruktury krytycznej.",
+  "fakty": [
+    "Ponad 50% organizacji doświadczyło incydentu bezpieczeństwa związanego z urządzeniem mobilnym lub IoT skutkującego utratą danych lub przestojem",
+    "85% badanych uznaje, że zagrożenia związane z urządzeniami mobilnymi wzrosły w ciągu ostatniego roku",
+    "Tylko 39% organizacji posiada zdefiniowane standardy bezpieczeństwa IoT obowiązujące we wszystkich projektach",
+    "Różnica między deklarowaną skutecznością zabezpieczeń (96%) a faktycznym odsetkiem incydentów (53%) pokazuje niebezpieczną lukę w percepcji ryzyka",
+    "Sektor infrastruktury krytycznej doświadcza poważniejszych konsekwencji – 47% firm z tej branży zgłasza poważne skutki incydentów, a 73% twierdzi, że zarządy reagują dopiero po naruszeniu"
+  ],
+  "zrodlo": "https://www.verizon.com/business/resources/reports/2024-mobile-security-index.pdf"
+},
   {
     "tytul": "KPMG – Barometr Cyberbezpieczeństwa 2024",
     "data": "luty 2024",
