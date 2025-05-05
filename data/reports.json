@@ -1,1 +1,150 @@
-
+[
+  {
+    "tytul": "CERT Orange Polska – Raport 2024",
+    "data": "kwiecień 2025",
+    "motyw_przewodni": "Mimo eskalacji ataków nasza obrona staje się skuteczniejsza dzięki inteligentnej automatyzacji, analizie opierającej się na AI oraz współpracy z użytkownikami.",
+    "fakty": [
+      "Styczeń: Grupa Midnight Blizzard powiązana z rosyjskimi służbami zaatakowała systemy Microsoftu – wykorzystano techniki rozpraszania haseł i manipulacji OAuth, by uzyskać dostęp do danych korporacyjnych.",
+      "Luty: Głogowska Policja odkryła nielegalne koparki kryptowalut podłączone do transformatora.",
+      "Marzec: Atak ransomware na chińską firmę – zaszyfrowane dane i zatrzymana produkcja.",
+      "Kwiecień: Włamanie do systemu Strefy Płatnego Parkowania w Szczecinie – podmieniono numer konta bankowego do wpłat.",
+      "Maj: Przejęcie kont administracyjnych w Polskiej Agencji Prasowej – opublikowano fałszywe depesze po wcześniejszej kradzieży danych dostępowych.",
+      "Czerwiec: Fałszywe doładowania Orange – kradzież danych logowania.",
+      "Lipiec: Phishing SMS podszywający się pod Orange Polska – fałszywe płatności.",
+      "Sierpień: Wyciek z WordPressa – podatność LiteSpeed Cache zagroziła tysiącom stron.",
+      "Wrzesień: Atak na spółkę Transport for London – wyciek danych około 5000 klientów, w tym numery kont i dane kontaktowe.",
+      "Październik: Kampania phishingowa podszywająca się pod wezwania do zaprzestania naruszeń praw autorskich – złośliwe załączniki wykradały dane.",
+      "Listopad: Fałszywe kody QR na parkomatach – przekierowanie do stron phishingowych.",
+      "Grudzień: Firma Panek ukarana przez UODO grzywną 1,5 mln zł za udostępnienie danych 21 tys. osób podczas prac rozwojowych."
+    ],
+    "zrodlo": "https://cert.orange.pl/raporty-cert-orange-polska/"
+  },
+  {
+  "tytul": "Verizon – Data Breach Investigations Report 2025",
+  "data": "Kwiecień 2025",
+  "motyw_przewodni": "Rok 2025 przynosi kolejne dowody na to, że czynnik ludzki wciąż pozostaje najsłabszym ogniwem – błąd, phishing i brak podstawowych zabezpieczeń to główne przyczyny naruszeń.",
+  "fakty": [
+    "68% naruszeń miało związek z błędem człowieka – najczęściej kliknięciem w phishing lub błędną konfiguracją",
+    "32% przypadków obejmowało ransomware lub inne formy wymuszeń (extortion), często bez szyfrowania danych",
+    "95% motywowanych było względami finansowymi – od kradzieży po szantaż",
+    "Główne wektory ataku: e-mail (phishing), aplikacje webowe i wykorzystanie słabych lub wyciekłych haseł"
+  ],
+  "zrodlo": "https://www.verizon.com/business/resources/reports/2025-dbir-data-breach-investigations-report.pdf"
+},
+  {
+  "tytul": "ENISA Space Threat Landscape Report 2025",
+  "data": "marzec 2025",
+  "motyw_przewodni": "Rosnąca liczba satelitów i uzależnienie od usług kosmicznych sprawiają, że sektor ten staje się coraz atrakcyjniejszym celem dla cyberataków. Złożoność zagrożeń wymaga ochrony na każdym etapie cyklu życia satelity.",
+  "fakty": [
+    "Najczęstsze zagrożenia to zakłócanie sygnału (jamming), przejmowanie systemów (hijacking) i eksploatacja sieci komputerowych (CNE)",
+    "Spoofing, podsłuch, broń antysatelitarna (ASAT) oraz ataki na funkcje sterujące są rzadziej spotykane, ale mają potencjalnie poważne skutki",
+    "Zagrożenia mogą prowadzić do poważnych konsekwencji fizycznych, ekonomicznych i społecznych, w tym zakłóceń w łańcuchach dostaw i usługach krytycznych jak lotnictwo",
+    "Rosnące ryzyko wynika z zastosowania komponentów komercyjnych (COTS), słabego uwzględnienia bezpieczeństwa w projektowaniu oraz niskiej dojrzałości sektora w zakresie cyberbezpieczeństwa",
+    "Wprowadzono europejskie centrum wymiany informacji – EU Space ISAC – oraz zalecenia „security by design” i „security by default” jako podstawę dla przyszłych standardów"
+  ],
+  "zrodlo": "https://www.enisa.europa.eu/publications/enisa-space-threat-landscape-2025"
+},
+  {
+    "tytul": "ENISA – NIS360 Report 2024",
+    "data": "luty 2025",
+    "motyw_przewodni": "Europa nie jest jeszcze gotowa na NIS2 – brakuje ćwiczeń transgranicznych, koordynacji i dojrzałości sektorowej.",
+    "fakty": [
+      "Analiza szeregu sektorów krytycznych wykazuje nierównomierny poziom dojrzałości",
+      "Najniższa dojrzałość w sektorach zdrowia, ICT service management, administracji publicznej i gazownictwa",
+      "Brak ćwiczeń transgranicznych znacząco obniża zdolność reagowania UE",
+      "Nierównomierność dojrzałości wskazuje na potrzebę lepszej koordynacji na poziomie UE",
+      "Raport bazuje na danych zebranych w 2024 roku"
+    ],
+    "zrodlo": "https://www.enisa.europa.eu/publications/enisa-nis360-2024"
+  },
+  {
+  "tytul": "Verizon – Payment Security Report 2024",
+  "data": "październik 2024",
+  "motyw_przewodni": "Po raz pierwszy od 10 lat większość firm nie spełnia już minimalnych wymagań PCI DSS – to znak, że presja rośnie szybciej niż gotowość organizacji.",
+  "fakty": [
+    "Tylko 43,4% organizacji spełnia wszystkie wymagania standardu PCI DSS – to najniższy wynik od 10 lat.",
+    "Najczęstszym obszarem niespełnienia są kontrole ciągłości – aż 79% organizacji nie spełniało wymagań związanych z ich utrzymaniem.",
+    "Branże o najwyższej zgodności: płatności detaliczne i usługi finansowe; najgorzej wypadła administracja i sektor publiczny.",
+    "Jednym z głównych trendów w 2024 r. jest nacisk na automatyzację i integrację bezpieczeństwa z DevOps oraz architekturami chmurowymi.",
+    "Raport ostrzega przed 'compliance fatigue' – firmy wdrażają procedury jedynie formalnie, bez rzeczywistego bezpieczeństwa."
+  ],
+  "zrodlo": "https://www.verizon.com/business/resources/reports/2024-payment-security-report.pdf"
+  },
+  {
+    "tytul": "Microsoft Digital Defense Report 2024",
+    "data": "październik 2024",
+    "motyw_przewodni": "Tożsamość cyfrowa i zautomatyzowane ataki napędzane AI to nowe pole bitwy w cyberprzestrzeni.",
+    "fakty": [
+      "Znaczący wzrost prób ataków ransomware z użyciem automatyzacji i AI",
+      "Grupa Octo Tempest uznana za jedno z największych cyberzagrożeń",
+      "Microsoft wspiera platformę wymiany danych wywiadowczych Crystal Ball w ramach CRI",
+      "Phishing z AI i deepfake’ami staje się coraz bardziej przekonujący",
+      "Przejęcia kont rosną mimo wdrożenia MFA, m.in. przez kradzież tokenów sesji"
+    ],
+    "zrodlo": "https://www.microsoft.com/en-us/security/security-insider/intelligence-reports/microsoft-digital-defense-report-2024"
+  },  
+  {
+    "tytul": "BIK – Raport Antyfraudowy 2024",
+    "data": "październik 2024",
+    "motyw_przewodni": "Socjotechnika i luki organizacyjne stanowią największe ryzyko – MŚP są szczególnie narażone.",
+    "fakty": [
+      "37% Polaków zetknęło się z próbą oszustwa (phishing, SMS, fałszywe inwestycje)",
+      "Najczęstsze metody fraudów obejmują m.in. wyłudzenia BLIK-owe, fałszywe faktury i podszywanie się pod urzędy",
+      "Większość firm nie stosuje narzędzi antyfraudowych, mimo dużych strat w sektorze korporacyjnym",
+      "Koszty i brak wiedzy to główne bariery we wdrażaniu zabezpieczeń",
+      "Znaczna część oszustw pochodzi od zorganizowanych grup przestępczych"
+    ],
+    "zrodlo": "https://rozwiazania-antyfraudowe.bik.pl/raporty"
+  },
+  {
+    "tytul": "Cyberbezpieczny Portfel 2024",
+    "data": "październik 2024",
+    "motyw_przewodni": "Mimo rosnącej świadomości, jedynie niewielki odsetek Polaków czuje się naprawdę bezpiecznie – edukacja wciąż kluczowa.",
+    "fakty": [
+      "60% Polaków najbardziej obawia się wyłudzeń danych osobowych",
+      "Tylko 6% ankietowanych czuje się zdecydowanie bezpiecznie online",
+      "Najczęściej wymieniane zagrożenia: phishing, fałszywe sklepy internetowe, SMS-y z linkami",
+      "52% respondentów obawia się bezpośredniej utraty pieniędzy",
+      "Raport rekomenduje 10 zasad cyberbezpieczeństwa jako fundament ochrony"
+    ],
+    "zrodlo": "https://www.zbp.pl/getmedia/3f8ee85e-c19b-431c-bec8-44f699e1c39c/raport_Cyberbezpieczny-portfel-2024"
+  },
+  {
+    "tytul": "Verizon – Data Breach Investigations Report 2024",
+    "data": "kwiecień 2024",
+    "motyw_przewodni": "Błąd ludzki pozostaje głównym czynnikiem umożliwiającym naruszenia, a motyw finansowy, w tym ransomware, nadal dominuje.",
+    "fakty": [
+      "Wysoki odsetek potwierdzonych naruszeń danych zidentyfikowany wśród wszystkich incydentów",
+      "74% naruszeń przyczyniono błędom ludzkim (błędna konfiguracja, phishing itp.)",
+      "82% ataków miało motyw finansowy – głównie kradzież danych i ransomware",
+      "20% naruszeń to przypadki ransomware/extortion",
+      "Najczęstsze wektory: e-mail (phishing), wykorzystanie słabych poświadczeń, ataki na serwery webowe"
+    ],
+    "zrodlo": "https://www.verizon.com/business/resources/reports/2024-dbir-data-breach-investigations-report.pdf"
+  },{
+  "tytul": "Verizon – Mobile Security Index 2024",
+  "data": "kwiecień 2024",
+  "motyw_przewodni": "Rosnąca liczba urządzeń mobilnych i IoT powiększa powierzchnię ataku szybciej, niż firmy rozwijają ochronę – szczególnie w sektorze infrastruktury krytycznej.",
+  "fakty": [
+    "Ponad 50% organizacji doświadczyło incydentu bezpieczeństwa związanego z urządzeniem mobilnym lub IoT skutkującego utratą danych lub przestojem",
+    "85% badanych uznaje, że zagrożenia związane z urządzeniami mobilnymi wzrosły w ciągu ostatniego roku",
+    "Tylko 39% organizacji posiada zdefiniowane standardy bezpieczeństwa IoT obowiązujące we wszystkich projektach",
+    "Różnica między deklarowaną skutecznością zabezpieczeń (96%) a faktycznym odsetkiem incydentów (53%) pokazuje niebezpieczną lukę w percepcji ryzyka",
+    "Sektor infrastruktury krytycznej doświadcza poważniejszych konsekwencji – 47% firm z tej branży zgłasza poważne skutki incydentów, a 73% twierdzi, że zarządy reagują dopiero po naruszeniu"
+  ],
+  "zrodlo": "https://www.verizon.com/business/resources/reports/2024-mobile-security-index.pdf"
+},
+  {
+    "tytul": "KPMG – Barometr Cyberbezpieczeństwa 2024",
+    "data": "luty 2024",
+    "motyw_przewodni": "Firmy coraz lepiej rozumieją ryzyko, ale brakuje im kadry i planów – phishing pozostaje numerem 1, outsourcing rośnie.",
+    "fakty": [
+      "66% firm doświadczyło przynajmniej jednego incydentu cyberbezpieczeństwa",
+      "Phishing wskazywany jest jako główne zagrożenie",
+      "84% firm outsourcuje przynajmniej jedną funkcję związaną z cyberbezpieczeństwem",
+      "Brak specjalistów utrudnia wdrożenie i utrzymanie zabezpieczeń",
+      "Obawy przed zorganizowanymi grupami cyberprzestępczymi spadły rok do roku"
+    ],
+    "zrodlo": "https://assets.kpmg.com/content/dam/kpmg/pl/pdf/2024/02/pl-Raport-KPMG-w-Polsce-Barometr-cyberbezpieczeństwa-2024.pdf"
+  }
+]
