@@ -19,82 +19,83 @@
   ],
   "zrodlo": "https://cert.orange.pl/raporty-cert-orange-polska/"
   },
-  {
-    "tytul": "Verizon – Data Breach Investigations Report 2024",
-    "data": "kwiecień 2024",
-    "motyw_przewodni": "Czynniki ludzkie – takie jak błędy, phishing i pośpiech – są głównym powodem naruszeń. Ransomware i motyw finansowy dominują w krajobrazie zagrożeń.",
-    "fakty": [
-      "30 458 incydentów, z czego 10 626 zakończyło się naruszeniem danych",
-      "68% naruszeń zawierało element błędu ludzkiego, np. kliknięcie w phishing lub błędna konfiguracja",
-      "94,6% ataków miało motyw finansowy – głównie kradzież danych, szantaż i wyłudzenia",
-      "32% przypadków dotyczyło ransomware lub form wymuszeń (extortion)",
-      "Najczęstsze wektory: e-mail (phishing), aplikacje webowe, dostęp przez VPN lub słabe hasła"
-    ],
-    "zrodlo": "https://www.verizon.com/business/resources/reports/2024-dbir-data-breach-investigations-report.pdf"
-  },
-  {
-    "tytul": "Cyberbezpieczny Portfel 2024",
-    "data": "październik 2024",
-    "motyw_przewodni": "Polacy coraz lepiej rozumieją zagrożenia, ale tylko niewielki odsetek czuje się bezpiecznie online – edukacja i świadomość to klucz.",
-    "fakty": [
-      "60% Polaków najbardziej obawia się wyłudzenia danych osobowych",
-      "Tylko 6% zdecydowanie czuje się bezpiecznie w cyfrowym świecie",
-      "Najczęstsze zagrożenia to phishing, fałszywe sklepy i SMS-y z linkami",
-      "52% osób obawia się bezpośredniej utraty pieniędzy",
-      "Raport promuje 10 zasad cyberbezpieczeństwa jako fundament ochrony"
-    ],
-    "zrodlo": "https://www.wib.org.pl/raport-cyberbezpieczny-portfel"
-  },
-  {
-    "tytul": "ENISA – NIS360 Report 2024",
-    "data": "luty 2025",
-    "motyw_przewodni": "Europa nie jest jeszcze gotowa na wdrożenie NIS2 – brakuje ćwiczeń, koordynacji i dojrzałości w wielu sektorach.",
-    "fakty": [
-      "Raport obejmuje 22 sektory uznane za krytyczne w ramach NIS2",
-      "Sektory zdrowia, ICT service management, administracji publicznej i gazowy należą do najniżej ocenionych pod względem dojrzałości",
-      "Brak transgranicznych ćwiczeń osłabia przygotowanie UE na incydenty o szerokim zasięgu",
-      "Nierównomierna dojrzałość sektorów pokazuje potrzebę lepszej koordynacji działań na poziomie UE",
-      "Raport opublikowany w lutym 2025, bazuje na danych zebranych w 2024 roku"
-    ],
-    "zrodlo": "https://www.enisa.europa.eu/publications/enisa-nis360-2024"
-  },
-  {
-    "tytul": "KPMG – Barometr Cyberbezpieczeństwa 2024",
-    "data": "luty 2024",
-    "motyw_przewodni": "Firmy coraz lepiej rozumieją zagrożenia, ale brakuje im ludzi, zasobów i planów – outsourcing rośnie, a phishing wciąż króluje.",
-    "fakty": [
-      "66% firm zarejestrowało przynajmniej jeden incydent cyberbezpieczeństwa",
-      "Phishing niezmiennie uznawany jest za główne zagrożenie",
-      "84% firm outsourcuje przynajmniej jedną funkcję cyberbezpieczeństwa",
-      "Największym problemem jest brak specjalistów – trudności z rekrutacją i utrzymaniem kadry",
-      "Obawy przed zorganizowanymi grupami cyberprzestępczymi spadły o 17 punktów procentowych"
-    ],
-    "zrodlo": "https://home.kpmg/pl/pl/home/insights/2024/02/barometr-cyberbezpieczenstwa-2024.html"
-  },
+ [
   {
     "tytul": "BIK – Raport Antyfraudowy 2024",
     "data": "styczeń 2024",
-    "motyw_przewodni": "Przestępcy wykorzystują socjotechnikę i słabości organizacyjne – szczególnie dotkliwe dla MŚP.",
+    "motyw_przewodni": "Socjotechnika i luki organizacyjne stanowią największe ryzyko – MŚP są szczególnie narażone.",
     "fakty": [
-      "Ponad 1/3 Polaków (37%) zetknęła się z próbą oszustwa – głównie phishing, SMS-y i fałszywe inwestycje",
-      "5 najczęstszych metod fraudów to m.in. wyłudzenia „na BLIKa”, fałszywe faktury, linki do złośliwych stron i podszywanie się pod urzędy",
-      "77% firm nie wdraża narzędzi ochrony przed fraudami, mimo że 12% dużych firm straciło w 2023 roku ponad 10 mln zł",
-      "Firmy wskazują brak wiedzy i wysokie koszty jako główne bariery wdrażania zabezpieczeń",
-      "56% fraudów pochodziło od zorganizowanych grup przestępczych – według deklaracji firm"
+      "37% Polaków zetknęło się z próbą oszustwa (phishing, SMS, fałszywe inwestycje)",
+      "Najczęstsze metody fraudów obejmują m.in. wyłudzenia BLIK-owe, fałszywe faktury i podszywanie się pod urzędy",
+      "Większość firm nie stosuje narzędzi antyfraudowych, mimo dużych strat w sektorze korporacyjnym",
+      "Koszty i brak wiedzy to główne bariery we wdrażaniu zabezpieczeń",
+      "Znaczna część oszustw pochodzi od zorganizowanych grup przestępczych"
     ],
     "zrodlo": "https://rozwiazania-antyfraudowe.bik.pl/raporty"
   },
   {
+    "tytul": "KPMG – Barometr Cyberbezpieczeństwa 2024",
+    "data": "luty 2024",
+    "motyw_przewodni": "Firmy coraz lepiej rozumieją ryzyko, ale brakuje im kadry i planów – phishing pozostaje numerem 1, outsourcing rośnie.",
+    "fakty": [
+      "66% firm doświadczyło przynajmniej jednego incydentu cyberbezpieczeństwa",
+      "Phishing wskazywany jest jako główne zagrożenie",
+      "84% firm outsourcuje przynajmniej jedną funkcję związaną z cyberbezpieczeństwem",
+      "Brak specjalistów utrudnia wdrożenie i utrzymanie zabezpieczeń",
+      "Obawy przed zorganizowanymi grupami cyberprzestępczymi spadły rok do roku"
+    ],
+    "zrodlo": "https://home.kpmg/pl/pl/home/insights/2024/02/barometr-cyberbezpieczenstwa-2024.html"
+  },
+  {
+    "tytul": "Cyberbezpieczny Portfel 2024",
+    "data": "październik 2024",
+    "motyw_przewodni": "Mimo rosnącej świadomości, jedynie niewielki odsetek Polaków czuje się naprawdę bezpiecznie – edukacja wciąż kluczowa.",
+    "fakty": [
+      "60% Polaków najbardziej obawia się wyłudzeń danych osobowych",
+      "Tylko 6% ankietowanych czuje się zdecydowanie bezpiecznie online",
+      "Najczęściej wymieniane zagrożenia: phishing, fałszywe sklepy internetowe, SMS-y z linkami",
+      "52% respondentów obawia się bezpośredniej utraty pieniędzy",
+      "Raport rekomenduje 10 zasad cyberbezpieczeństwa jako fundament ochrony"
+    ],
+    "zrodlo": "https://www.wib.org.pl/raport-cyberbezpieczny-portfel"
+  },
+  {
     "tytul": "Microsoft Digital Defense Report 2024",
     "data": "październik 2024",
-    "motyw_przewodni": "Tożsamość cyfrowa i zautomatyzowane ataki napędzane AI stają się głównym polem walki w cyberprzestrzeni.",
+    "motyw_przewodni": "Tożsamość cyfrowa i zautomatyzowane ataki napędzane AI to nowe pole bitwy w cyberprzestrzeni.",
     "fakty": [
-      "Microsoft obserwuje ponad 4 000 prób ataków ransomware każdego dnia – coraz więcej z nich wykorzystuje automatyzację i AI",
-      "Grupa Octo Tempest została uznana przez FBI za jedno z trzech największych cyberzagrożeń – obok Chin i Rosji",
-      "Microsoft wspiera platformę Crystal Ball w ramach CRI – 60 państw wymieniających dane wywiadowcze w czasie rzeczywistym",
-      "Phishing z użyciem AI i deepfake’ów staje się coraz bardziej przekonujący – odtworzenie głosów, twarzy i stylów pisania",
-      "Wzrost przejęć kont mimo MFA – przez kradzież tokenów sesji i ataki typu pass-the-cookie"
+      "Znaczący wzrost prób ataków ransomware z użyciem automatyzacji i AI",
+      "Grupa Octo Tempest uznana za jedno z największych cyberzagrożeń",
+      "Microsoft wspiera platformę wymiany danych wywiadowczych Crystal Ball w ramach CRI",
+      "Phishing z AI i deepfake’ami staje się coraz bardziej przekonujący",
+      "Przejęcia kont rosną mimo wdrożenia MFA, m.in. przez kradzież tokenów sesji"
     ],
     "zrodlo": "https://www.microsoft.com/en-us/security/security-insider/intelligence-reports/microsoft-digital-defense-report-2024"
+  },
+  {
+    "tytul": "ENISA – NIS360 Report 2024",
+    "data": "luty 2025",
+    "motyw_przewodni": "Europa nie jest jeszcze gotowa na NIS2 – brakuje ćwiczeń transgranicznych, koordynacji i dojrzałości sektorowej.",
+    "fakty": [
+      "Analiza szeregu sektorów krytycznych wykazuje nierównomierny poziom dojrzałości",
+      "Najniższa dojrzałość w sektorach zdrowia, ICT service management, administracji publicznej i gazownictwa",
+      "Brak ćwiczeń transgranicznych znacząco obniża zdolność reagowania UE",
+      "Nierównomierność dojrzałości wskazuje na potrzebę lepszej koordynacji na poziomie UE",
+      "Raport bazuje na danych zebranych w 2024 roku"
+    ],
+    "zrodlo": "https://www.enisa.europa.eu/publications/enisa-nis360-2024"
+  },
+  {
+    "tytul": "Verizon – Data Breach Investigations Report 2024",
+    "data": "kwiecień 2024",
+    "motyw_przewodni": "Błąd ludzki pozostaje głównym czynnikiem umożliwiającym naruszenia, a motyw finansowy, w tym ransomware, nadal dominuje.",
+    "fakty": [
+      "Wysoki odsetek potwierdzonych naruszeń danych zidentyfikowany wśród wszystkich incydentów",
+      "74% naruszeń przyczyniono błędom ludzkim (błędna konfiguracja, phishing itp.)",
+      "82% ataków miało motyw finansowy – głównie kradzież danych i ransomware",
+      "20% naruszeń to przypadki ransomware/extortion",
+      "Najczęstsze wektory: e-mail (phishing), wykorzystanie słabych poświadczeń, ataki na serwery webowe"
+    ],
+    "zrodlo": "https://www.verizon.com/business/resources/reports/2024-dbir-data-breach-investigations-report.pdf"
   }
 ]
