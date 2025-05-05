@@ -1,16 +1,23 @@
 [
-  {
-    "tytul": "CERT Orange Polska – Raport 2024",
-    "data": "styczeń 2025",
-    "motyw_przewodni": "Liczba zagrożeń rośnie, ale skuteczność obrony również – dzięki AI, automatyzacji i edukacji.",
-    "fakty": [
-      "305 tys. zablokowanych domen phishingowych, w tym z użyciem wildcard blocking",
-      "4,85 mln użytkowników ochronionych przed utratą danych i pieniędzy",
-      "Najczęstsze incydenty: phishing, DDoS oraz infekcje malware (np. Remcos RAT, Lumma Stealer)",
-      "Nowe zagrożenia: CoinLurker (kryptowaluty), ataki na OTT, platformy e-finansowe i bankowość mobilną",
-      "Rosnące zagrożenie: Malware-as-a-Service i ataki przez łańcuchy dostaw"
-    ],
-    "zrodlo": "https://cert.orange.pl/raporty-cert-orange-polska/"
+{
+  "tytul": "CERT Orange Polska – Raport 2024",
+  "data": "styczeń 2025",
+  "motyw_przewodni": "Liczba zagrożeń rośnie, ale skuteczność obrony również – dzięki AI, automatyzacji i edukacji.",
+  "fakty": [
+    "Styczeń: Grupa Midnight Blizzard (NOBELIUM) powiązana z rosyjskimi służbami zaatakowała systemy Microsoftu – wykorzystano techniki rozpraszania haseł i manipulacji OAuth, by uzyskać dostęp do danych korporacyjnych.",
+    "Luty: Głogowska Policja odkryła nielegalne koparki kryptowalut podłączone do transformatora.",
+    "Marzec: Atak ransomware na chińską firmę – zaszyfrowane dane i zatrzymana produkcja.",
+    "Kwiecień: Włamanie do systemu Strefy Płatnego Parkowania w Szczecinie – podmieniono numer konta bankowego do wpłat.",
+    "Maj: Przejęcie kont administracyjnych w Polskiej Agencji Prasowej – opublikowano fałszywe depesze po wcześniejszej kradzieży danych dostępowych.",
+    "Czerwiec: Fałszywe doładowania Orange – kradzież danych logowania.",
+    "Lipiec: Phishing SMS podszywający się pod Orange Polska – fałszywe płatności.",
+    "Sierpień: Wyciek z WordPressa – podatność LiteSpeed Cache zagroziła tysiącom stron.",
+    "Wrzesień: Atak na spółkę Transport for London – wyciek danych około 5000 klientów, w tym numery kont i dane kontaktowe.",
+    "Październik: Kampania phishingowa podszywająca się pod wezwania do zaprzestania naruszeń praw autorskich – złośliwe załączniki wykradały dane.",
+    "Listopad: Fałszywe kody QR na parkomatach – przekierowanie do stron phishingowych.",
+    "Grudzień: Firma Panek ukarana przez UODO grzywną 1,5 mln zł za udostępnienie danych 21 tys. osób podczas prac rozwojowych."
+  ],
+  "zrodlo": "https://cert.orange.pl/raporty-cert-orange-polska/"
   },
   {
     "tytul": "Verizon – Data Breach Investigations Report 2024",
