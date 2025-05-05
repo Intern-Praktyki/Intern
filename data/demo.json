@@ -1,7 +1,7 @@
 [
-{
+    {
   "tytul": "CERT Orange Polska – Raport 2024",
-  "data": "styczeń 2025",
+  "data": "kwiecień 2025",
   "motyw_przewodni": "Mimo eskalacji ataków nasza obrona staje się skuteczniejsza dzięki inteligentnej automatyzacji, analizie opierającej się na AI oraz współpracy z użytkownikami.",
   "fakty": [
     "Styczeń: Grupa Midnight Blizzard powiązana z rosyjskimi służbami zaatakowała systemy Microsoftu – wykorzystano techniki rozpraszania haseł i manipulacji OAuth, by uzyskać dostęp do danych korporacyjnych.",
@@ -18,7 +18,20 @@
     "Grudzień: Firma Panek ukarana przez UODO grzywną 1,5 mln zł za udostępnienie danych 21 tys. osób podczas prac rozwojowych."
   ],
   "zrodlo": "https://cert.orange.pl/raporty-cert-orange-polska/"
+  },  {
+    "tytul": "ENISA – NIS360 Report 2024",
+    "data": "luty 2025",
+    "motyw_przewodni": "Europa nie jest jeszcze gotowa na NIS2 – brakuje ćwiczeń transgranicznych, koordynacji i dojrzałości sektorowej.",
+    "fakty": [
+      "Analiza szeregu sektorów krytycznych wykazuje nierównomierny poziom dojrzałości",
+      "Najniższa dojrzałość w sektorach zdrowia, ICT service management, administracji publicznej i gazownictwa",
+      "Brak ćwiczeń transgranicznych znacząco obniża zdolność reagowania UE",
+      "Nierównomierność dojrzałości wskazuje na potrzebę lepszej koordynacji na poziomie UE",
+      "Raport bazuje na danych zebranych w 2024 roku"
+    ],   
+    "zrodlo": "https://www.enisa.europa.eu/publications/enisa-nis360-2024"
   },
+
   {
     "tytul": "BIK – Raport Antyfraudowy 2024",
     "data": "styczeń 2024",
@@ -41,9 +54,8 @@
       "Phishing wskazywany jest jako główne zagrożenie",
       "84% firm outsourcuje przynajmniej jedną funkcję związaną z cyberbezpieczeństwem",
       "Brak specjalistów utrudnia wdrożenie i utrzymanie zabezpieczeń",
-      "Obawy przed zorganizowanymi grupami cyberprzestępczymi spadły rok do roku"
     ],
-    "zrodlo": "https://home.kpmg/pl/pl/home/insights/2024/02/barometr-cyberbezpieczenstwa-2024.html"
+    "zrodlo": "https://assets.kpmg.com/content/dam/kpmg/pl/pdf/2024/02/pl-Raport-KPMG-w-Polsce-Barometr-cyberbezpieczeństwa-2024.pdf"
   },
   {
     "tytul": "Cyberbezpieczny Portfel 2024",
@@ -56,7 +68,7 @@
       "52% respondentów obawia się bezpośredniej utraty pieniędzy",
       "Raport rekomenduje 10 zasad cyberbezpieczeństwa jako fundament ochrony"
     ],
-    "zrodlo": "https://www.wib.org.pl/raport-cyberbezpieczny-portfel"
+    "zrodlo": "https://www.zbp.pl/getmedia/3f8ee85e-c19b-431c-bec8-44f699e1c39c/raport_Cyberbezpieczny-portfel-2024"
   },
   {
     "tytul": "Microsoft Digital Defense Report 2024",
@@ -71,19 +83,7 @@
     ],
     "zrodlo": "https://www.microsoft.com/en-us/security/security-insider/intelligence-reports/microsoft-digital-defense-report-2024"
   },
-  {
-    "tytul": "ENISA – NIS360 Report 2024",
-    "data": "luty 2025",
-    "motyw_przewodni": "Europa nie jest jeszcze gotowa na NIS2 – brakuje ćwiczeń transgranicznych, koordynacji i dojrzałości sektorowej.",
-    "fakty": [
-      "Analiza szeregu sektorów krytycznych wykazuje nierównomierny poziom dojrzałości",
-      "Najniższa dojrzałość w sektorach zdrowia, ICT service management, administracji publicznej i gazownictwa",
-      "Brak ćwiczeń transgranicznych znacząco obniża zdolność reagowania UE",
-      "Nierównomierność dojrzałości wskazuje na potrzebę lepszej koordynacji na poziomie UE",
-      "Raport bazuje na danych zebranych w 2024 roku"
-    ],
-    "zrodlo": "https://www.enisa.europa.eu/publications/enisa-nis360-2024"
-  },
+
   {
     "tytul": "Verizon – Data Breach Investigations Report 2024",
     "data": "kwiecień 2024",
