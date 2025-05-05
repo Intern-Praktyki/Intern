@@ -54,6 +54,13 @@ nav a:hover {
   color: #38bdf8;
   border-color: #38bdf8;
 }
+nav a.highlight {
+  color: #f39c12;
+  font-weight: 700;
+  text-shadow: 0 0 5px rgba(243, 156, 18, 0.8);
+  border-bottom: 2px solid #f39c12;
+}
+
 
 .news-card,
 .event-entry,
