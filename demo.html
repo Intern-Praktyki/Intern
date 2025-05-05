@@ -3,71 +3,56 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Praktyki – Demo Newsy</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+  <title>Demo – Raporty Cyberbezpieczeństwa</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
     <div class="container">
-      <h1>Praktyki – Demo</h1>
-      <p>Strona testowa do ładowania newsów</p>
+      <h1>Praktyki – Raporty Demo</h1>
+      <p>Prezentacja podsumowań raportów z 2024 roku</p>
     </div>
   </header>
 
   <nav>
-    <a href="demo.html" class="active">Demo Newsy</a>
+    <a href="index.html">Newsy</a>
     <a href="events.html">Wydarzenia</a>
-    <a href="reports.html">Raporty</a>
+    <a href="demo.html" class="active">Raporty (Demo)</a>
   </nav>
 
   <main class="container">
-    <div id="demo-news-container"></div>
+    <div id="raporty-demo-container"></div>
   </main>
 
   <footer>
     <div class="container">
-      <p>&copy; 2025 Praktyki. Projekt testowy do nauki GitHub Pages.</p>
+      <p>&copy; 2025 Praktyki. Projekt edukacyjny o cyberbezpieczeństwie.</p>
     </div>
   </footer>
 
   <script>
-    function fetchDemoNewsyOncePerDay() {
-      const lastLoadDemo = localStorage.getItem("lastDemoNewsLoad");
-      const now = new Date();
-      const todayAtFourDemo = new Date();
-      todayAtFourDemo.setHours(4, 0, 0, 0);
-
-      if (!lastLoadDemo || new Date(lastLoadDemo).toDateString() !== now.toDateString() || (now > todayAtFourDemo && new Date(lastLoadDemo) < todayAtFourDemo)) {
-        fetchDemoNewsy();
-        localStorage.setItem("lastDemoNewsLoad", now.toISOString());
-      } else {
-        console.log("Demo newsy już załadowane dziś.");
-      }
-    }
-
-    function fetchDemoNewsy() {
+    document.addEventListener("DOMContentLoaded", () => {
       fetch("data/demo.json")
         .then(res => res.json())
-        .then(demoNews => {
-          const container = document.getElementById("demo-news-container");
+        .then(reports => {
+          const container = document.getElementById("raporty-demo-container");
           container.innerHTML = "";
-          demoNews.forEach(item => {
-            const card = document.createElement("div");
-            card.className = "demo-news-card";
-            card.innerHTML = `
-              <h2>${item.title}</h2>
-              <p><strong>Źródło:</strong> ${item.source} | <strong>Data:</strong> ${item.date}</p>
-              ${item.description ? `<p>${item.description}</p>` : ""}
-              <a href="${item.link}" target="_blank">Czytaj więcej</a>
+          reports.forEach(r => {
+            const box = document.createElement("div");
+            box.className = "report-entry";
+            box.innerHTML = `
+              <h3>${r.tytul}</h3>
+              <p><strong>Data:</strong> ${r.data}</p>
+              <p><strong>Myśl przewodnia:</strong> ${r.motyw_przewodni}</p>
+              <ul>${r.fakty.map(f => `<li>${f}</li>`).join("")}</ul>
+              <a href="${r.zrodlo}" target="_blank">Zobacz źródło</a>
             `;
-            container.appendChild(card);
+            container.appendChild(box);
           });
         })
-        .catch(error => console.error("Błąd podczas ładowania demo newsów:", error));
-    }
-
-    fetchDemoNewsyOncePerDay();
+        .catch(err => console.error("Błąd ładowania raportów demo:", err));
+    });
   </script>
 </body>
 </html>
