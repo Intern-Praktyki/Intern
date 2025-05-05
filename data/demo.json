@@ -80,4 +80,21 @@
       "Phishing wskazywany jest jako główne zagrożenie",
       "84% firm outsourcuje przynajmniej jedną funkcję związaną z cyberbezpieczeństwem",
       "Brak specjalistów utrudnia wdrożenie i utrzymanie zabezpieczeń",
-      "Obawy przed zorganizowanymi grupami cyberpr
+      "Obawy przed zorganizowanymi grupami cyberprzestępczymi spadły rok do roku"
+    ],
+    "zrodlo": "https://assets.kpmg.com/content/dam/kpmg/pl/pdf/2024/02/pl-Raport-KPMG-w-Polsce-Barometr-cyberbezpieczeństwa-2024.pdf"
+  },
+  {
+    "tytul": "BIK – Raport Antyfraudowy 2024",
+    "data": "styczeń 2024",
+    "motyw_przewodni": "Socjotechnika i luki organizacyjne stanowią największe ryzyko – MŚP są szczególnie narażone.",
+    "fakty": [
+      "37% Polaków zetknęło się z próbą oszustwa (phishing, SMS, fałszywe inwestycje)",
+      "Najczęstsze metody fraudów obejmują m.in. wyłudzenia BLIK-owe, fałszywe faktury i podszywanie się pod urzędy",
+      "Większość firm nie stosuje narzędzi antyfraudowych, mimo dużych strat w sektorze korporacyjnym",
+      "Koszty i brak wiedzy to główne bariery we wdrażaniu zabezpieczeń",
+      "Znaczna część oszustw pochodzi od zorganizowanych grup przestępczych"
+    ],
+    "zrodlo": "https://rozwiazania-antyfraudowe.bik.pl/raporty"
+  }
+]
