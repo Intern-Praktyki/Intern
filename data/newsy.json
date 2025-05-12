@@ -1,5 +1,12 @@
 [
-    {
+{
+    "title": "Microsoft oficjalnie zakazał swoim pracownikom korzystania z chińskiej aplikacji AI DeepSeek",
+    "link": "https://techcrunch.com/2025/05/08/microsoft-employees-are-banned-from-using-deepseek-app-president-says/",
+    "source": "techcrunch.com",
+    "description": "Decyzja została ogłoszona przez wiceprezesa Microsoftu Brada Smitha podczas przesłuchania w amerykańskim Senacie. Powodem są poważne obawy dotyczące bezpieczeństwa danych oraz ryzyko wpływu chińskiej propagandy na odpowiedzi generowane przez DeepSeek. Aplikacja przechowuje dane użytkowników na serwerach w Chinach, gdzie zgodnie z lokalnym prawem mogą one być udostępniane chińskim służbom. DeepSeek znana jest także z cenzurowania tematów uznawanych przez chińskie władze za wrażliwe. Microsoft nie udostępnia aplikacji DeepSeek w swoim sklepie, a jej model AI został dopuszczony do chmury Azure dopiero po przeprowadzeniu rygorystycznych testów bezpieczeństwa i modyfikacjach mających usunąć potencjalnie szkodliwe efekty działania. Warto podkreślić, że DeepSeek jest open source – każdy może pobrać model i uruchomić go na własnych serwerach, jednak nie eliminuje to ryzyka generowania propagandy czy niebezpiecznego kodu.",
+    "date": "2025-05-08"
+  }, 
+  {
     "title": "Rosyjska grupa hakerów atakuje strony internetowe rządu rumuńskiego w dniu wyborów",
     "link": "https://www.politico.eu/article/russia-hacker-group-romania-election-day-constitutional-court-vote/",
     "source": "politico.eu",
