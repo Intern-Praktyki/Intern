@@ -7,6 +7,13 @@
     "date": "2025-05-16"
   },
     {
+    "title": "European Vulnerability Database – nowe narzędzie UE w walce z cyberzagrożeniami",
+    "link": "https://www.enisa.europa.eu/news/consult-the-european-vulnerability-database-to-enhance-your-digital-security",
+    "source": "enisa.com",
+    "description": "Europejska Agencja ds. Cyberbezpieczeństwa (ENISA) uruchomiła European Vulnerability Database (EUVD), zgodnie z wymogami dyrektywy NIS2. Baza jest już dostępna i będzie utrzymywana przez ENISA. Baza jest publicznie dostępna – mogą z niej korzystać zarówno dostawcy systemów i usług IT, jak i użytkownicy, instytucje państwowe, firmy oraz badacze. Informacje prezentowane są w formie przejrzystych paneli dotyczących m.in. podatności krytycznych, wykorzystywanych oraz koordynowanych przez europejskie CSIRT.Wpisy w bazie obejmują opis podatności, dotknięte produkty lub usługi i ich wersje, poziom zagrożenia, sposób potencjalnego wykorzystania oraz dostępne poprawki lub zalecenia. Dane pochodzą z otwartych źródeł, komunikatów CSIRT, zaleceń producentów i oznaczeń podatności wykorzystywanych przez atakujących. ENISA, jako organ wyznaczony do nadawania numerów CVE (CNA), może od 2024 roku rejestrować podatności wykryte przez unijne CSIRT lub zgłoszone im do koordynowanego ujawnienia, o ile nie podlegają innemu CNA. Warto zaznaczyć, że EUVD to narzędzie inne niż powstająca w ramach Cyber Resilience Act platforma Single Reporting Platform (SRP), która od września 2026 roku będzie służyć do obowiązkowego zgłaszania wykorzystywanych podatności przez producentów. W 2025 roku ENISA planuje dalszy rozwój EUVD i zbieranie opinii użytkowników, by jeszcze lepiej wspierać zarządzanie podatnościami i bezpieczeństwo cyfrowe w Europie.",
+    "date": "2025-05-13"
+  },
+    {
     "title": "Papież Leon XIV: Sztuczna inteligencja wyzwaniem dla godności człowieka i sprawiedliwości",
     "link": "https://www.yahoo.com/news/pope-leo-xiv-says-ai-180754975.html?guccounter=1&guce_referrer=aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS8&guce_referrer_sig=AQAAAC9KsZAN95b1ozjIENcmPLKNQcAvdqoWl2INrW5Dk7YNxJgMvhHY83WThr2n0UNWxZVuNOEjMIxX8t8QX8S5nJj8BnTOaRYSdJfqJI_ay-Kr7KU-TdyXKhJ6ab0dulB1hcpsEIVJZ7d3v7MkGUOmnKOArLDpiZnazDaa3-9QAFSc",
     "source": "yahoo.com",
