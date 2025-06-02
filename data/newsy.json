@@ -34,7 +34,14 @@
     "description": "Międzynarodowe organy ścigania połączyły siły, aby aresztować 270 osób w ramach globalnej operacji o nazwie RapTor, mającej na celu rozbicie przestępczej sieci sprzedającej narkotyki przez dark web. Służby z USA i UE skonfiskowały ponad 200 milionów dolarów, 144 kilogramy fentanylu lub narkotyków z fentanylem oraz 180 sztuk broni. Operacja opierała się na wcześniejszych likwidacjach rynków dark web, takich jak Incognito, Nemesis czy Tor2Door. Europol poinformował o 130 aresztowaniach w USA, 42 w Niemczech oraz wielu w innych krajach, m.in. Wielkiej Brytanii, Francji, Austrii, Holandii, Brazylii i Korei Południowej. Zatrzymani to sprzedawcy, kupujący i administratorzy wcześniej zamkniętych platform. Służby kontynuowały zbieranie dowodów po likwidacjach, co pozwoliło na skoordynowane śledztwa i identyfikację podejrzanych, którzy ukrywali się za pomocą szyfrowania i kryptowalut. W operacji uczestniczyły setki agencji z USA, Europy i Azji.",
     "date": "2025-05-23"
   },
-,
+ {
+    "title": "Coca-Cola Padła Celem Ataku: Dwa Groźne Cyberataki w Maju 2025 Roku",
+    "link": "https://hackread.com/coca-cola-bottling-partner-ransomware-data-breach/",
+    "source": "hackread.media",
+    "description": "W maju 2025 roku Coca-Cola oraz jej partner rozlewniczy, Coca-Cola Europacific Partners, stali się celem dwóch poważnych cyberataków, które mogą zagrozić bezpieczeństwu danych pracowników i klientów. Grupa ransomware Everest twierdzi, że zhakowała systemy Coca-Coli, głównie w regionie Bliskiego Wschodu, szczególnie w biurze w Dubaju, kradnąc dane 959 pracowników, w tym skany paszportów, wiz, dane wynagrodzeń oraz wewnętrzne dokumenty HR, co potwierdzono wyciekiem 502 MB danych zawierających 1104 pliki. Z kolei grupa Gehenna (GHNA) ogłosiła, że włamano się do platformy Salesforce CCEP, wykradając ponad 23 miliony rekordów z lat 2016-2025, obejmujących dane CRM, takie jak 7,5 miliona kont Salesforce, 9,5 miliona spraw obsługi klienta, 6 milionów wpisów kontaktowych i ponad 400 000 rekordów produktów, o łącznej wielkości 63-64 GB. Obie firmy nie potwierdziły publicznie tych incydentów, ale dane udostępnione przez hakerów na forach dark web zostały uznane za autentyczne przez badaczy cyberbezpieczeństwa. Ataki te pokazują, jak bardzo Coca-Cola padła celem zaawansowanych cyberprzestępców, co podkreśla rosnące zagrożenie dla dużych korporacji ze strony ransomware i kradzieży danych w chmurze.",
+    "date": "2025-05-19"
+  },
+
     {
     "title": "Watykan cyfrową twierdzą: przygotowania do konklawe",
     "link": "https://cybernews.com/security/vatican-cybersecurity-vote-pope/",
