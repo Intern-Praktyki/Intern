@@ -218,4 +218,21 @@ footer {
 .entry.active .entry-details {
   display: block;
 }
+.entry-title {
+  cursor: pointer;
+  font-weight: 700;
+  margin-bottom: 12px;
+  background-color: #007acc; /* kontrastujący, intensywny niebieski */
+  padding: 12px 16px;
+  border-radius: 6px;
+  color: #fff; /* biały tekst na niebieskim tle */
+  text-align: center;
+  user-select: none;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 122, 204, 0.5);
+}
+
+.entry-title:hover {
+  background-color: #005fa3; /* ciemniejszy niebieski po najechaniu */
+}
 
