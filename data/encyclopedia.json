@@ -1,0 +1,34 @@
+[
+  {
+    "termin": "Phishing",
+    "kategoria": "Socjotechnika",
+    "opis": "Metoda ataku polegająca na wyłudzaniu poufnych informacji poprzez podszywanie się pod zaufane źródło, najczęściej za pomocą fałszywych wiadomości email.",
+    "przyklady": [
+      "Fałszywe emaile od banków z prośbą o podanie danych logowania",
+      "Podszywanie się pod portal społecznościowy",
+      "Wiadomości z linkami do złośliwych stron"
+    ],
+    "zrodlo": "https://www.cert.pl/posts/phishing/"
+  },
+  {
+    "termin": "Malware",
+    "kategoria": "Złośliwe oprogramowanie",
+    "opis": "Złośliwe oprogramowanie zaprojektowane w celu uszkodzenia, zakłócenia lub uzyskania nieautoryzowanego dostępu do systemów komputerowych.",
+    "przyklady": [
+      "Wirusy komputerowe",
+      "Trojany",
+      "Spyware i keyloggery"
+    ],
+    "zrodlo": ""
+  },
+  {
+    "termin": "Firewall",
+    "kategoria": "Zabezpieczenia sieciowe",
+    "opis": "System zabezpieczeń sieciowych monitorujący i kontrolujący przychodzący oraz wychodzący ruch sieciowy na podstawie ustalonych reguł bezpieczeństwa.",
+    "przyklady": [
+      "Firewall sprzętowy na routerze",
+      "Zapora systemowa Windows Defender",
+      "Firewall aplikacyjny WAF"
+    ]
+  }
+]
