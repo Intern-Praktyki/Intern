@@ -180,3 +180,44 @@ footer {
   padding: 0 0 12px 0;
   margin-bottom: 12px;
 }
+.encyclopedia-desc-box {
+  background: #fff;
+  color: #222;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px #0003;
+  padding: 2rem 2rem 1.5rem 2rem;
+  margin-bottom: 2.5rem;
+  margin-top: 1.5rem;
+  max-width: 900px;
+  width: 100%;
+}
+.encyclopedia-full-desc h2 {
+  margin-top: 0;
+}
+.encyclopedia-full-desc ul {
+  margin: 1em 0;
+  padding-left: 20px;
+}
+.encyclopedia-full-desc a {
+  color: #007acc;
+  font-weight: bold;
+}
+.close-desc-btn {
+  margin-top: 1.2em;
+  background: #222;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.5em 1.5em;
+  font-size: 1em;
+  cursor: pointer;
+  float: right;
+}
+.close-desc-btn:hover {
+  background: #007acc;
+  color: #fff;
+}
+.entry-title.active {
+  background: #005fa3;
+  color: #fff;
+}
