@@ -4,8 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Encyklopedia Cyberbezpieczeństwa</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
@@ -21,36 +21,13 @@
     <a href="encyclopedia.html" class="active">Encyklopedia</a>
   </nav>
   <main class="container">
-  <div id="encyclopedia-demo-container" class="encyclopedia-grid"></div>
-</main>
-  <script src="main.js"></script>
+    <div id="encyclopedia-demo-container" class="encyclopedia-grid"></div>
+  </main>
   <footer>
     <div class="container">
       <p>&copy; 2025 Praktyki. Projekt edukacyjny o cyberbezpieczeństwie.</p>
     </div>
   </footer>
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      fetch("data/encyclopedia.json")
-        .then(res => res.json())
-        .then(entries => {
-          const container = document.getElementById("encyclopedia-demo-container");
-          container.innerHTML = "";
-          entries.forEach(e => {
-            const box = document.createElement("div");
-            box.className = "report-entry";
-            box.innerHTML = `
-              <h3>${e.termin}</h3>
-              <p><strong>Kategoria:</strong> ${e.kategoria}</p>
-              <p>${e.opis}</p>
-              ${e.przyklady ? `<ul>${e.przyklady.map(p => `<li>${p}</li>`).join("")}</ul>` : ''}
-              ${e.zrodlo ? `<a href="${e.zrodlo}" target="_blank">Więcej informacji</a>` : ''}
-            `;
-            container.appendChild(box);
-          });
-        })
-        .catch(err => console.error("Błąd ładowania encyklopedii:", err));
-    });
-  </script>
+  <script src="main.js"></script>
 </body>
 </html>
