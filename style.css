@@ -153,4 +153,41 @@ footer {
 .entry.active .entry-details {
   display: block;
 }
+.encyclopedia-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 32px;
+}
+
+.entry-title {
+  cursor: pointer;
+  font-weight: 600;
+  margin-bottom: 8px;
+  background: #f2f2f2;
+  padding: 12px;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+.entry-title:hover {
+  background: #e8e8e8;
+}
+.entry-details {
+  display: none;
+  margin-top: 0px;
+  background: #fafafa;
+  border-radius: 4px;
+  padding: 0 12px 12px 12px;
+  font-size: 0.98em;
+}
+.entry.active .entry-details {
+  display: block;
+}
+.entry {
+  box-shadow: 0 2px 7px #00000011;
+  background: #fff;
+  border-radius: 8px;
+  padding: 0 0 12px 0;
+  margin-bottom: 12px;
+}
 
