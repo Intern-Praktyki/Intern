@@ -58,3 +58,46 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
 });
+// ==== KOD DO DODANIA NA KOŃCU ISTNIEJĄCEGO main.js ====
+
+// Ładowanie newsów (tylko na stronie index.html)
+document.addEventListener('DOMContentLoaded', () => {
+  const newsContainer = document.getElementById('news-container');
+  
+  // Sprawdź czy jesteśmy na stronie newsów
+  if (!newsContainer) return;
+  
+  fetch('data/newsy.json')
+    .then(res => {
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      return res.json();
+    })
+    .then(data => {
+      if (!data.newsy || data.newsy.length === 0) {
+        newsContainer.innerHTML = '<p class="no-data">Brak newsów do wyświetlenia.</p>';
+        return;
+      }
+      
+      newsContainer.innerHTML = data.newsy.map(news => `
+        <article class="news-item">
+          <h2>${news.tytul}</h2>
+          <div class="meta">
+            <span class="date">${news.data}</span>
+            ${news.kategoria ? `<span class="category">${news.kategoria}</span>` : ''}
+          </div>
+          <p>${news.tresc}</p>
+          ${news.link ? `<a href="${news.link}" target="_blank" class="read-more">Czytaj więcej →</a>` : ''}
+        </article>
+      `).join('');
+    })
+    .catch(error => {
+      console.error('Błąd ładowania newsów:', error);
+      newsContainer.innerHTML = `
+        <div class="error">
+          <p>⚠️ Nie udało się załadować newsów.</p>
+          <p>Sprawdź czy plik <code>data/newsy.json</code> istnieje.</p>
+          <p class="error-details">Błąd: ${error.message}</p>
+        </div>
+      `;
+    });
+});
